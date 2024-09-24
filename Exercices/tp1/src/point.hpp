@@ -1,7 +1,7 @@
 #ifndef __ZZ__point__hpp
 #define __ZZ__point__hpp
 
-#include <stdio.h> 
+#include <iostream>
 
 class Point {
 
@@ -17,7 +17,15 @@ public :
     double getX() const;
     double getY() const;
 
-    virtual void afficher() const = 0;
+    void setX(const double);
+    void setY(const double);
+
+
+    virtual void afficher(std::ostream &) const = 0;
+
+    friend std::ostream & operator<<(std::ostream &, Point  const &);
 };
+
+std::ostream & operator<<(std::ostream &, Point const &);
 
 #endif

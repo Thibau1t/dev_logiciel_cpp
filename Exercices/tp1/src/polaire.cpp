@@ -20,5 +20,19 @@ double Polaire::getDistance() const {
     return _radius;
 }
 
-void Polaire::afficher() const{
+void Polaire::setAngle(const double a){
+    _angle = a;
+    _x = _radius * cos(a);
+    _y = _radius * sin(a);
+}
+
+void Polaire::setDistance(const double r) {
+    _radius = r;
+
+    _x = r * cos(_angle);
+    _y = r * sin(_angle);
+}
+
+void Polaire::afficher(std::ostream & os) const{
+    os << "(a=" << _angle << ";d=" << _radius << ")";
 }

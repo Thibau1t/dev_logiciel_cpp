@@ -15,7 +15,7 @@ endif ()
 # Sources #-----------------------------------------------------------------------------------------
 set ( PROJECT_HEADERS
       src/exemple.hpp
-      #src/cartesien.hpp
+      src/cartesien.hpp
       #src/nuage.hpp
       src/point.hpp
       src/polaire.hpp
@@ -23,7 +23,7 @@ set ( PROJECT_HEADERS
     )
 
 set ( PROJECT_SOURCES
-      #src/cartesien.cpp
+      src/cartesien.cpp
       #src/nuage.cpp
       src/point.cpp
       src/polaire.cpp
