@@ -2,8 +2,10 @@
 #define __ZZ__cartesien__hpp
 
 #include <iostream>
+#include <cmath>
 
 #include "point.hpp"
+#include "polaire.hpp"
 
 class Cartesien : public Point {
 private:
@@ -22,6 +24,8 @@ public:
 
     // Méthode afficher
     void afficher(std::ostream& flux) const override;
+
+    void convertir(Polaire & p) const;
 };
 
 std::istream & operator>>(std::istream&, Cartesien &); 
