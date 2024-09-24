@@ -1,7 +1,9 @@
 #include "cartesien.hpp"
+#include "polaire.hpp"
 
 Cartesien::Cartesien(const double x, const double y) : _x(x), _y(y) {
 }
+
 
 double Cartesien::getX() const {
     return _x;
@@ -31,6 +33,9 @@ void Cartesien::convertir(Polaire & p) const {
 
     p.setDistance(distance);
     p.setAngle(angle);
+}
+void Cartesien::convertir(Cartesien& c) const {
+    c = *this;
 }
 
 std::istream & operator>>(std::istream& flux, Cartesien & c){

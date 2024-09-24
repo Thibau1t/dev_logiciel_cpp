@@ -1,4 +1,5 @@
 #include "polaire.hpp"
+#include "cartesien.hpp"
 
 
 Polaire::Polaire(const double a, const double d) {
@@ -33,6 +34,10 @@ void Polaire::convertir(Cartesien & c) const {
 
     c.setX(x);
     c.setY(y);
+}
+
+void Polaire::convertir(Polaire & p) const{
+    p = *this; 
 }
 
 std::istream & operator>>(std::istream& flux, Polaire & p) {

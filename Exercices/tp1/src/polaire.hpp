@@ -2,7 +2,6 @@
 #define __ZZ__Poilaire__hpp
 
 #include "point.hpp"
-#include "cartesien.hpp"
 
 class Cartesien; // déclaration anticipée
 
@@ -22,7 +21,8 @@ public :
 
     void afficher(std::ostream &) const override;
 
-    void convertir(Cartesien &) const;
+    void convertir(Cartesien &) const override;
+    void convertir(Polaire &) const override;
 
 };
 
