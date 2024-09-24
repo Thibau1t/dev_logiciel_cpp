@@ -9,8 +9,7 @@ class Cartesien; // déclaration anticipée
 class Polaire : public Point {
 
 private : 
-    double _a;
-    double _d;
+    double _a, _d;
 
 public :
     Polaire(const double a=0, const double d=0);
