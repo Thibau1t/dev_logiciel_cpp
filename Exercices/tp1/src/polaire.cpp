@@ -26,6 +26,14 @@ void Polaire::afficher(std::ostream & os) const{
     os << "(a=" << _a << ";d=" << _d << ")";
 }
 
+void Polaire::convertir(Cartesien & c) const {
+    double radians = _a * (M_PI / 180.0); // Convertir l'angle en radians
+    double x = _d * cos(radians);
+    double y = _d * sin(radians);
+
+    c.setX(x);
+    c.setY(y);
+}
 
 std::istream & operator>>(std::istream& flux, Polaire & p) {
     double a, d;

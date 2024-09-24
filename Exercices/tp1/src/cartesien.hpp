@@ -7,6 +7,8 @@
 #include "point.hpp"
 #include "polaire.hpp"
 
+class Polaire; // déclaration anticipée
+
 class Cartesien : public Point {
 private:
     double _x, _y;
