@@ -4,8 +4,8 @@
 #include <sstream>
 #include <typeinfo>
 
-#include <cartesien.hpp>
-#include <polaire.hpp>
+#include "../src/cartesien.hpp"
+#include "../src/polaire.hpp"
 //#include <nuage.hpp>
 
 // Tests //-----------------------------------------------------------------------------------------
@@ -184,7 +184,7 @@ TEST_CASE ( "TP1_Point::ConversionVersCartesien_V1" ) {
 }
 
 //----------------------------------------------------------------------------------------------- 15
-/*TEST_CASE ( "TP1_Point::ConversionVirtuel" ) {
+TEST_CASE ( "TP1_Point::ConversionVirtuel" ) {
  const double x = 12.0;
  const double y = 24.0;
  const double a = 63.434948;
@@ -215,10 +215,11 @@ TEST_CASE ( "TP1_Point::ConversionVersCartesien_V1" ) {
  REQUIRE ( p1.getDistance() == Approx(d).epsilon(1e-3) );
  REQUIRE ( p2.getAngle() == Approx(a).epsilon(1e-3) );
  REQUIRE ( p2.getDistance() == Approx(d).epsilon(1e-3) );
-}*/
+}
 
+/*
 //----------------------------------------------------------------------------------------------- 16
-/*TEST_CASE ( "TP1_Point::ConversionVersPolaire_V2" ) {
+TEST_CASE ( "TP1_Point::ConversionVersPolaire_V2" ) {
  const double x = 12.0;
  const double y = 24.0;
  const double a = 63.434948;

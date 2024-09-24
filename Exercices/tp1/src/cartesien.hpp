@@ -5,7 +5,6 @@
 #include <cmath>
 
 #include "point.hpp"
-#include "polaire.hpp"
 
 class Polaire; // déclaration anticipée
 
@@ -14,20 +13,17 @@ private:
     double _x, _y;
     
 public:
-    // Constructeurs
     Cartesien(const double x = 0.0, const double y = 0.0);
 
-    // Accesseurs
     double getX() const;
     double getY() const;
 
     void setX(const double);
     void setY(const double);
 
-    // Méthode afficher
-    void afficher(std::ostream& flux) const override;
-
-    void convertir(Polaire & p) const;
+    void afficher(std::ostream&) const override;
+    void convertir(Polaire &) const override;
+    void convertir(Cartesien&) const override;
 };
 
 std::istream & operator>>(std::istream&, Cartesien &); 
