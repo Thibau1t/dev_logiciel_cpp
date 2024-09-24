@@ -17,7 +17,10 @@ public :
     double getAngle() const;
     double getDistance() const;
 
-    void afficher() const;
+    void setAngle(const double);
+    void setDistance(const double);
+
+    void afficher(std::ostream &) const;
 };
 
 

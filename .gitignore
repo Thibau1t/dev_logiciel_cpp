@@ -1,0 +1,2 @@
+# Ignore all build directories in future tp directories
+Exercices/tp*/build/
