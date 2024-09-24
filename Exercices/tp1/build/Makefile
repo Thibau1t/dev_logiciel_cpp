@@ -181,6 +181,30 @@ tp1_test/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tp1_test.dir/build.make CMakeFiles/tp1_test.dir/build
 .PHONY : tp1_test/fast
 
+src/cartesien.o: src/cartesien.cpp.o
+.PHONY : src/cartesien.o
+
+# target to build an object file
+src/cartesien.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/src/cartesien.cpp.o
+.PHONY : src/cartesien.cpp.o
+
+src/cartesien.i: src/cartesien.cpp.i
+.PHONY : src/cartesien.i
+
+# target to preprocess a source file
+src/cartesien.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/src/cartesien.cpp.i
+.PHONY : src/cartesien.cpp.i
+
+src/cartesien.s: src/cartesien.cpp.s
+.PHONY : src/cartesien.s
+
+# target to generate assembly for a file
+src/cartesien.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/src/cartesien.cpp.s
+.PHONY : src/cartesien.cpp.s
+
 src/main_point.o: src/main_point.cpp.o
 .PHONY : src/main_point.o
 
@@ -338,6 +362,9 @@ help:
 	@echo "... tp1_point"
 	@echo "... tp1_test"
 	@echo "... tp1_vecteur"
+	@echo "... src/cartesien.o"
+	@echo "... src/cartesien.i"
+	@echo "... src/cartesien.s"
 	@echo "... src/main_point.o"
 	@echo "... src/main_point.i"
 	@echo "... src/main_point.s"
