@@ -3,29 +3,15 @@
 
 #include <iostream>
 
+// class abstraite
 class Point {
+public:
+    virtual void afficher(std::ostream& flux) const = 0;
+    virtual ~Point() = default;
 
-protected :
-    double _x;
-    double _y;
-
-public :
-    Point(double x=0, double y=0);
-
-    virtual ~Point();
-
-    double getX() const;
-    double getY() const;
-
-    void setX(const double);
-    void setY(const double);
-
-
-    virtual void afficher(std::ostream &) const = 0;
-
-    friend std::ostream & operator<<(std::ostream &, Point  const &);
 };
 
-std::ostream & operator<<(std::ostream &, Point const &);
+std::ostream& operator<<(std::ostream&, const Point &);
+
 
 #endif

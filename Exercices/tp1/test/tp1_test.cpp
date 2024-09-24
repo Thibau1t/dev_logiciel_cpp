@@ -130,6 +130,7 @@ TEST_CASE ( "TP1_Point::AffichageVirtuel" ) {
  REQUIRE ( flux2.str() == "(x=13;y=25)" );
 }
 
+
 //----------------------------------------------------------------------------------------------- 12
 TEST_CASE ( "TP1_Point::OperateurFlux" ) {
  Polaire p(12.0,24.0);
@@ -148,8 +149,9 @@ TEST_CASE ( "TP1_Point::OperateurFlux" ) {
  REQUIRE ( flux2.str() == "(x=13;y=25)" );
 }
 
+/*
 //----------------------------------------------------------------------------------------------- 13
-/*TEST_CASE ( "TP1_Point::ConversionVersPolaire_V1" ) {
+TEST_CASE ( "TP1_Point::ConversionVersPolaire_V1" ) {
  const double x = 12.0;
  const double y = 24.0;
  const double a = 63.434948;
@@ -162,7 +164,8 @@ TEST_CASE ( "TP1_Point::OperateurFlux" ) {
 
  REQUIRE ( p.getAngle() == Approx(a).epsilon(1e-3) );
  REQUIRE ( p.getDistance() == Approx(d).epsilon(1e-3) );
-}*/
+}
+*/
 
 //----------------------------------------------------------------------------------------------- 14
 /*TEST_CASE ( "TP1_Point::ConversionVersCartesien_V1" ) {

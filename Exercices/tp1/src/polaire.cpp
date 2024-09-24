@@ -1,38 +1,39 @@
 #include "polaire.hpp"
 
 
-Polaire::Polaire(const double a, const double r) {
-    _angle  = a;
-    _radius = r;
-
-    _x = r * cos(a);
-    _y = r * sin(a);
-}
-
-Polaire::~Polaire() {
+Polaire::Polaire(const double a, const double d) {
+    _a  = a;
+    _d = d;
 }
 
 double Polaire::getAngle() const {
-    return _angle;
+    return _a;
 }
 
 double Polaire::getDistance() const {
-    return _radius;
+    return _d;
 }
 
 void Polaire::setAngle(const double a){
-    _angle = a;
-    _x = _radius * cos(a);
-    _y = _radius * sin(a);
+    _a = a;
 }
 
-void Polaire::setDistance(const double r) {
-    _radius = r;
-
-    _x = r * cos(_angle);
-    _y = r * sin(_angle);
+void Polaire::setDistance(const double d) {
+    _d = d;
 }
 
 void Polaire::afficher(std::ostream & os) const{
-    os << "(a=" << _angle << ";d=" << _radius << ")";
+    os << "(a=" << _a << ";d=" << _d << ")";
 }
+
+
+std::istream & operator>>(std::istream& flux, Polaire & p) {
+    double a, d;
+    flux >> a >> d;
+
+    p.setAngle(a);
+    p.setDistance(d);
+
+    return flux;
+}
+
