@@ -2,6 +2,9 @@
 #define __ZZ__Poilaire__hpp
 
 #include "point.hpp"
+#include "cartesien.hpp"
+
+class Cartesien; // déclaration anticipée
 
 class Polaire : public Point {
 
@@ -19,6 +22,9 @@ public :
     void setDistance(const double);
 
     void afficher(std::ostream &) const override;
+
+    void convertir(Cartesien &) const;
+
 };
 
 std::istream & operator>>(std::istream&, Polaire &); 

@@ -168,7 +168,7 @@ TEST_CASE ( "TP1_Point::ConversionVersPolaire_V1" ) {
 
 
 //----------------------------------------------------------------------------------------------- 14
-/*TEST_CASE ( "TP1_Point::ConversionVersCartesien_V1" ) {
+TEST_CASE ( "TP1_Point::ConversionVersCartesien_V1" ) {
  const double a = 12.0;
  const double d = 24.0;
  const double x = 23.475542;
@@ -181,7 +181,7 @@ TEST_CASE ( "TP1_Point::ConversionVersPolaire_V1" ) {
 
  REQUIRE ( c.getX() == Approx(x).epsilon(1e-3) );
  REQUIRE ( c.getY() == Approx(y).epsilon(1e-3) );
-}*/
+}
 
 //----------------------------------------------------------------------------------------------- 15
 /*TEST_CASE ( "TP1_Point::ConversionVirtuel" ) {
