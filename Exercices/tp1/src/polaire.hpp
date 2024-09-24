@@ -1,18 +1,16 @@
 #ifndef __ZZ__Poilaire__hpp
 #define __ZZ__Poilaire__hpp
 
-#include <cmath>
 #include "point.hpp"
 
 class Polaire : public Point {
 
 private : 
-    double _angle;
-    double _radius;
+    double _a;
+    double _d;
 
 public :
-    Polaire(const double x=0, const double y=0);
-    ~Polaire();
+    Polaire(const double a=0, const double d=0);
 
     double getAngle() const;
     double getDistance() const;
@@ -20,8 +18,9 @@ public :
     void setAngle(const double);
     void setDistance(const double);
 
-    void afficher(std::ostream &) const;
+    void afficher(std::ostream &) const override;
 };
 
+std::istream & operator>>(std::istream&, Polaire &); 
 
 #endif
