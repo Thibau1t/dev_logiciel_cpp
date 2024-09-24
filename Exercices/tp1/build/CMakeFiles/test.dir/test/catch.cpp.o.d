@@ -1,7 +1,7 @@
 CMakeFiles/test.dir/test/catch.cpp.o: \
- /home/thibault/Documents/ZZ3/dev_logicielle/Exercices/tp1/test/catch.cpp \
+ /home/thibault/Documents/ZZ3/dev_logiciel_cpp/Exercices/tp1/test/catch.cpp \
  /usr/include/stdc-predef.h \
- /home/thibault/Documents/ZZ3/dev_logicielle/Exercices/tp1/test/catch.hpp \
+ /home/thibault/Documents/ZZ3/dev_logiciel_cpp/Exercices/tp1/test/catch.hpp \
  /usr/include/c++/14.2.1/cstddef \
  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/c++config.h \
  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/os_defines.h \
