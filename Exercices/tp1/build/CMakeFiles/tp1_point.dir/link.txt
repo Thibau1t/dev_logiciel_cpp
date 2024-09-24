@@ -1,0 +1,1 @@
+/sbin/c++ -Wall -Wextra -pedantic  CMakeFiles/tp1_point.dir/src/main_point.cpp.o CMakeFiles/common.dir/src/point.cpp.o CMakeFiles/common.dir/src/polaire.cpp.o -o tp1_point
