@@ -1,7 +1,7 @@
 CMakeFiles/common.dir/src/polaire.cpp.o: \
- /home/thibault/Documents/ZZ3/dev_logicielle/Exercices/tp1/src/polaire.cpp \
+ /home/thibault/Documents/ZZ3/dev_logiciel_cpp/Exercices/tp1/src/polaire.cpp \
  /usr/include/stdc-predef.h \
- /home/thibault/Documents/ZZ3/dev_logicielle/Exercices/tp1/src/polaire.hpp \
+ /home/thibault/Documents/ZZ3/dev_logiciel_cpp/Exercices/tp1/src/polaire.hpp \
  /usr/include/c++/14.2.1/cmath \
  /usr/include/c++/14.2.1/bits/requires_hosted.h \
  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/c++config.h \
@@ -71,7 +71,7 @@ CMakeFiles/common.dir/src/polaire.cpp.o: \
  /usr/include/c++/14.2.1/tr1/poly_hermite.tcc \
  /usr/include/c++/14.2.1/tr1/poly_laguerre.tcc \
  /usr/include/c++/14.2.1/tr1/riemann_zeta.tcc \
- /home/thibault/Documents/ZZ3/dev_logicielle/Exercices/tp1/src/point.hpp \
+ /home/thibault/Documents/ZZ3/dev_logiciel_cpp/Exercices/tp1/src/point.hpp \
  /usr/include/stdio.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdarg.h \
  /usr/include/bits/types/__fpos_t.h /usr/include/bits/types/__mbstate_t.h \
