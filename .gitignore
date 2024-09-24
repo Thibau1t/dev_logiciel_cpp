@@ -1,2 +1,5 @@
 # Ignore all build directories
 Exercices/tp*/build/
+
+# ignore vscode file
+.vscode
