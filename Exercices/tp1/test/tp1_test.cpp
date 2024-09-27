@@ -6,7 +6,7 @@
 
 #include "../src/cartesien.hpp"
 #include "../src/polaire.hpp"
-#include <nuage.hpp>
+#include "../src/nuage.hpp"
 
 // Tests //-----------------------------------------------------------------------------------------
 
@@ -320,33 +320,33 @@ Cartesien p4(x[3],y[3]);
 Nuage n;
 
 //----------------------------------------------------------------------------------------------- 20
-/*TEST_CASE ( "TP1_Nuage::Barycentre" ) {
+TEST_CASE ( "TP1_Nuage::Barycentre" ) {
  n.ajouter(p1);
  n.ajouter(p2);
  n.ajouter(p3);
  n.ajouter(p4);
 
- Cartesien b = barycentre(n);
+ Cartesien b = Nuage::barycentre(n);
 
  REQUIRE ( b.getX() == Approx((x[0]+x[1]+x[2]+x[3])/4) );
  REQUIRE ( b.getY() == Approx((y[0]+y[1]+y[2]+y[3])/4) );
-}*/
+}
 
 //----------------------------------------------------------------------------------------------- 21
-/*TEST_CASE ( "TP1_Nuage::BarycentreCartesien" ) {
- Cartesien b = BarycentreCartesien()(n);
+TEST_CASE ( "TP1_Nuage::BarycentreCartesien" ) {
+ Cartesien b = Nuage::BarycentreCartesien()(n);
 
  REQUIRE ( b.getX() == Approx((x[0]+x[1]+x[2]+x[3])/4) );
  REQUIRE ( b.getY() == Approx((y[0]+y[1]+y[2]+y[3])/4) );
-}*/
+}
 
 //----------------------------------------------------------------------------------------------- 22
-/*TEST_CASE ( "TP1_Nuage::BarycentrePolaire" ) {
+TEST_CASE ( "TP1_Nuage::BarycentrePolaire" ) {
  Polaire p(Cartesien((x[0]+x[1]+x[2]+x[3])/4,(y[0]+y[1]+y[2]+y[3])/4));
- Polaire b = BarycentrePolaire()(n);
+ Polaire b = Nuage::BarycentrePolaire()(n);
 
  REQUIRE ( b.getAngle() == Approx(p.getAngle()) );
  REQUIRE ( b.getDistance() == Approx(p.getDistance()) );
-}*/
+}
 
 // Fin //-------------------------------------------------------------------------------------------
