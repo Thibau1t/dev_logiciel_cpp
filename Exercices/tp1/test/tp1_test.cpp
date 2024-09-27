@@ -233,7 +233,7 @@ TEST_CASE ( "TP1_Point::ConversionVersPolaire_V2" ) {
 }
 
 //----------------------------------------------------------------------------------------------- 17
-/*TEST_CASE ( "TP1_Point::ConversionVersCartesien_V2" ) {
+TEST_CASE ( "TP1_Point::ConversionVersCartesien_V2" ) {
  const double a = 12.0;
  const double d = 24.0;
  const double x = 23.475542;
@@ -244,7 +244,7 @@ TEST_CASE ( "TP1_Point::ConversionVersPolaire_V2" ) {
 
  REQUIRE ( c.getX() == Approx(x).epsilon(1e-3) );
  REQUIRE ( c.getY() == Approx(y).epsilon(1e-3) );
-}*/
+}
 
 //----------------------------------------------------------------------------------------------- 18
 /*TEST_CASE ( "TP1_Nuage::Ajout" ) {

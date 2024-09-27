@@ -7,7 +7,8 @@ Polaire::Polaire(const double a, const double d) {
     _d = d;
 }
 
-Polaire::Polaire(const Cartesien &) {
+Polaire::Polaire(const Cartesien & c) {
+    c.convertir(*this);
 }
 
 double Polaire::getAngle() const {

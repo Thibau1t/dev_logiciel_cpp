@@ -4,8 +4,8 @@
 Cartesien::Cartesien(const double x, const double y) : _x(x), _y(y) {
 }
 
-Cartesien::Cartesien(const Polaire &) {
-    
+Cartesien::Cartesien(const Polaire & p) {
+    p.convertir(*this);
 }
 
 
