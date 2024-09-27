@@ -217,7 +217,7 @@ TEST_CASE ( "TP1_Point::ConversionVirtuel" ) {
  REQUIRE ( p2.getDistance() == Approx(d).epsilon(1e-3) );
 }
 
-/*
+
 //----------------------------------------------------------------------------------------------- 16
 TEST_CASE ( "TP1_Point::ConversionVersPolaire_V2" ) {
  const double x = 12.0;
@@ -230,7 +230,7 @@ TEST_CASE ( "TP1_Point::ConversionVersPolaire_V2" ) {
 
  REQUIRE ( p.getAngle() == Approx(a).epsilon(1e-3) );
  REQUIRE ( p.getDistance() == Approx(d).epsilon(1e-3) );
-}*/
+}
 
 //----------------------------------------------------------------------------------------------- 17
 /*TEST_CASE ( "TP1_Point::ConversionVersCartesien_V2" ) {
