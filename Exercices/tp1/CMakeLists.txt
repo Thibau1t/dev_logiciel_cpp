@@ -19,7 +19,8 @@ set ( PROJECT_HEADERS
       src/nuage.hpp
       src/point.hpp
       src/polaire.hpp
-      #src/vecteur.hpp
+      src/vecteur.hpp
+      src/iterator.hpp
     )
 
 set ( PROJECT_SOURCES
@@ -27,7 +28,8 @@ set ( PROJECT_SOURCES
       src/nuage.cpp
       src/point.cpp
       src/polaire.cpp
-      #src/vecteur.cpp
+      src/vecteur.cpp
+      src/iterator.cpp
     )
 
 set ( TEST_HEADERS
