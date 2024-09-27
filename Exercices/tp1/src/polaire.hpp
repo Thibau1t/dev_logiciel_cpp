@@ -12,6 +12,7 @@ private :
 
 public :
     Polaire(const double a=0, const double d=0);
+    Polaire(const Cartesien &);
 
     double getAngle() const;
     double getDistance() const;

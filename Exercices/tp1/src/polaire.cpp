@@ -7,6 +7,9 @@ Polaire::Polaire(const double a, const double d) {
     _d = d;
 }
 
+Polaire::Polaire(const Cartesien &) {
+}
+
 double Polaire::getAngle() const {
     return _a;
 }

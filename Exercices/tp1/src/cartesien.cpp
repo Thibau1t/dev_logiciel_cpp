@@ -4,6 +4,10 @@
 Cartesien::Cartesien(const double x, const double y) : _x(x), _y(y) {
 }
 
+Cartesien::Cartesien(const Polaire &) {
+    
+}
+
 
 double Cartesien::getX() const {
     return _x;
