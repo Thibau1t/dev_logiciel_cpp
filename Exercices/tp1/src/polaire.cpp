@@ -11,6 +11,10 @@ Polaire::Polaire(const Cartesien & c) {
     c.convertir(*this);
 }
 
+Point* Polaire::clone() const {
+    return new Polaire(*this);
+}
+
 double Polaire::getAngle() const {
     return _a;
 }

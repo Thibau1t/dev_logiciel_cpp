@@ -1,5 +1,5 @@
-#ifndef __ZZ__cartesien__hpp
-#define __ZZ__cartesien__hpp
+#ifndef __ZZ__Cartesien__hpp
+#define __ZZ__Cartesien__hpp
 
 #include <iostream>
 #include <cmath>
@@ -15,6 +15,8 @@ private:
 public:
     Cartesien(const double x = 0.0, const double y = 0.0);
     Cartesien(const Polaire &);
+
+    Point* clone() const override;
 
     double getX() const;
     double getY() const;

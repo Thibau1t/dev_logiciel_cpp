@@ -1,5 +1,5 @@
-#ifndef __ZZ__Poilaire__hpp
-#define __ZZ__Poilaire__hpp
+#ifndef __ZZ__Polaire__hpp
+#define __ZZ__Polaire__hpp
 
 #include "point.hpp"
 
@@ -13,6 +13,7 @@ private :
 public :
     Polaire(const double a=0, const double d=0);
     Polaire(const Cartesien &);
+    Point* clone() const override;
 
 
     double getAngle() const;

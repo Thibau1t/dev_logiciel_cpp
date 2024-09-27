@@ -8,6 +8,10 @@ Cartesien::Cartesien(const Polaire & p) {
     p.convertir(*this);
 }
 
+Point* Cartesien::clone() const {
+    return new Cartesien(*this);
+}
+
 
 double Cartesien::getX() const {
     return _x;

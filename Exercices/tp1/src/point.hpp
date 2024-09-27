@@ -11,6 +11,7 @@ class Point {
 public:
 
     virtual ~Point() = default;
+    virtual Point* clone() const = 0;
 
     virtual void afficher(std::ostream& flux) const = 0;
     virtual void convertir(Polaire &) const = 0;
