@@ -1,3 +1,6 @@
+# Ignore Cours directory
+Cours/
+
 # Ignore all build directories
 Exercices/tp*/build/
 
