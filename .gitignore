@@ -5,4 +5,4 @@ Cours/
 Exercices/tp*/build/
 
 # ignore vscode directory
-.vscode/
+.vscode/ 
