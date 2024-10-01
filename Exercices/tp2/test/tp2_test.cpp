@@ -48,7 +48,7 @@ TEST_CASE ( "TP2_Nuage::Iterateurs" ) {
  REQUIRE ( t[2].getDistance() == Approx(p3.getDistance()) );
  REQUIRE ( t[3].getAngle() == Approx(p4.getAngle()) );
  REQUIRE ( t[3].getDistance() == Approx(p4.getDistance()) );
-}
+} 
 
 //------------------------------------------------------------------------------------------------ 3
 /*TEST_CASE ( "TP2_Nuage::BarycentreCartesien_V1" ) {
