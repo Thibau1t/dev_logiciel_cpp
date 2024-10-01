@@ -17,7 +17,6 @@ public :
     using const_iterator = std::vector<Point*>::const_iterator; // Const iterator
 
     Cartesien static barycentre(const Nuage &);
-    
 
     struct BarycentreCartesien {
         Cartesien operator()(const Nuage &n) const;
