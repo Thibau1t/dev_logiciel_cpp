@@ -34,10 +34,6 @@ Polaire Nuage::BarycentrePolaire::operator()(const Nuage &n) const {
     return Polaire(Nuage::barycentre(n));
 }
 
-
-Nuage::Nuage() {
-}
-
 Nuage::~Nuage() {
     for(Point * p : _points) {
         delete p;
