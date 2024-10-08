@@ -25,7 +25,6 @@ set ( PROJECT_SOURCES
       src/cartesien.cpp
       src/point.cpp
       src/polaire.cpp
-      src/barycentre.cpp
     )
 
 set ( TEST_HEADERS
