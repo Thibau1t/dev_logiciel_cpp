@@ -121,24 +121,16 @@ Cartesien barycentre_v2(const Container &nuage)
     double sumX = 0.0;
     double sumY = 0.0;
 
-    // Itérer à travers les éléments du conteneur
     for (const auto &point : nuage)
     {
         Cartesien c;
-        point.convertir(c); // Convertir chaque point en Cartesien
+        point.convertir(c);
         sumX += c.getX();
         sumY += c.getY();
         count++;
     }
 
-    // Si aucun point n'a été ajouté, retourner (0, 0)
-    if (count == 0)
-    {
-        return Cartesien(0.0, 0.0);
-    }
-
-    // Calculer les coordonnées moyennes
-    return Cartesien(sumX / count, sumY / count);
+    return (count == 0) ? Cartesien(0.0, 0.0) : Cartesien(sumX / count, sumY / count);
 }
 
 #endif
