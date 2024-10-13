@@ -167,33 +167,43 @@ TEST_CASE("TP3_Chaine::ConversionVariadic")
 }
 
 //------------------------------------------------------------------------------------------------ 4
-/*TEST_CASE ( "TP3_Chaine::ConversionTuple1" ) {
- std::tuple<std::string,int,double>      t1{"Smith",10,13.27};
- std::tuple<std::string,int,double,long> t2{"Smith",10,13.27,100};
+TEST_CASE("TP3_Chaine::ConversionTuple1")
+{
+    std::tuple<std::string, int, double> t1{"Smith", 10, 13.27};
+    std::tuple<std::string, int, double, long> t2{"Smith", 10, 13.27, 100};
 
- int erreur = 0;
+    int erreur = 0;
 
- try { std::cout << "t1 = " << chaine(t1) << std::endl; }
- catch (const ExceptionChaine & e) { erreur=1; }
+    try
+    {
+        std::cout << "t1 = " << chaine(t1) << std::endl;
+    }
+    catch (const ExceptionChaine &e)
+    {
+        erreur = 1;
+    }
 
- REQUIRE ( (chaine(t1) == "Smith 10 13.270000"
-            || chaine(t1) == "Smith 10 13.270000 ") == true );
+    REQUIRE((chaine(t1) == "Smith 10 13.270000" || chaine(t1) == "Smith 10 13.270000 ") == true);
 
- REQUIRE ( erreur == 0 );
+    REQUIRE(erreur == 0);
 
- try { std::cout << "t2 = " << chaine(t2) << std::endl; }
+    try
+    {
+        std::cout << "t2 = " << chaine(t2) << std::endl;
+    }
 
- catch (const ExceptionChaine & e) {
-  std::string message1 = e.what();
-  std::string message2 = "Conversion en chaine impossible pour '"+type_name(std::get<3>(t2))+"'";
+    catch (const ExceptionChaine &e)
+    {
+        std::string message1 = e.what();
+        std::string message2 = "Conversion en chaine impossible pour '" + type_name(std::get<3>(t2)) + "'";
 
-  std::cout << "<null>" << std::endl;
-  REQUIRE ( message1 == message2 );
-  erreur=2;
- }
+        std::cout << "<null>" << std::endl;
+        REQUIRE(message1 == message2);
+        erreur = 2;
+    }
 
- REQUIRE ( erreur == 2 );
-}*/
+    REQUIRE(erreur == 2);
+}
 
 //------------------------------------------------------------------------------------------------ 5
 using Identite = std::tuple<std::string, std::string>; // {nom,prenom}
