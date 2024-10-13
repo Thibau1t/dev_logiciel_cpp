@@ -4,6 +4,7 @@
 #include <string>
 #include <typeinfo>
 #include <sstream>
+#include <tuple>
 
 #include "exceptionChaine.hpp"
 
@@ -31,6 +32,13 @@ template <>
 std::string chaine(const double &x)
 {
     return std::to_string(x);
+}
+
+template <typename T, typename... Args>
+std::string chaine(const T &first, const Args &...args)
+{
+    return chaine(first) + " " + chaine(args...);
+    // return chaine(first) + (sizeof...(args) > 0 ? " " + chaine(args...) : "");
 }
 
 #endif
