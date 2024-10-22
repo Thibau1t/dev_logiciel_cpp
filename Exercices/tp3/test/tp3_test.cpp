@@ -210,50 +210,58 @@ using Identite = std::tuple<std::string, std::string>; // {nom,prenom}
 using Date = std::tuple<int, int, int>;                // {jour,mois,annee}
 using Coordonnees = std::tuple<double, double>;        // {x,y}
 
-/*TEST_CASE ( "TP3_Chaine::ConversionTuple2" ) {
- Identite    i = { "Smith", "John" };
- Date        d = { 13, 07, 2003 };
- Coordonnees c = { 1.234, 6.789 };
+TEST_CASE("TP3_Chaine::ConversionTuple2")
+{
+    Identite i = {"Smith", "John"};
+    Date d = {13, 07, 2003};
+    Coordonnees c = {1.234, 6.789};
 
- int erreur = 0;
+    int erreur = 0;
 
- try {
-  std::cout << "i = " << chaine(i) << std::endl;
-  std::cout << "d = " << chaine(d) << std::endl;
-  std::cout << "c = " << chaine(c) << std::endl;
- }
- catch (const ExceptionChaine & e) { erreur=1; }
+    try
+    {
+        std::cout << "i = " << chaine(i) << std::endl;
+        std::cout << "d = " << chaine(d) << std::endl;
+        std::cout << "c = " << chaine(c) << std::endl;
+    }
+    catch (const ExceptionChaine &e)
+    {
+        erreur = 1;
+    }
 
- REQUIRE ( (chaine(i) == "Smith John"
-            || chaine(i) == "Smith John ") == true );
+    REQUIRE((chaine(i) == "Smith John" || chaine(i) == "Smith John ") == true);
 
- REQUIRE ( (chaine(d) == "13 7 2003"
-            || chaine(d) == "13 7 2003 ") == true );
+    REQUIRE((chaine(d) == "13 7 2003" || chaine(d) == "13 7 2003 ") == true);
 
- REQUIRE ( (chaine(c) == "1.234000 6.789000"
-            || chaine(c) == "1.234000 6.789000 ") == true );
+    REQUIRE((chaine(c) == "1.234000 6.789000" || chaine(c) == "1.234000 6.789000 ") == true);
 
- REQUIRE ( erreur == 0 );
-}*/
+    REQUIRE(erreur == 0);
+}
 
 //------------------------------------------------------------------------------------------------ 6
 using Personne = std::tuple<Identite, Date>;
 
-/*TEST_CASE ( "TP3_Chaine::ConversionCompositionTuples" ) {
- Identite i = { "Smith", "John" };
- Date     d = { 13, 07, 2003 };
- Personne p = { i,d };
+TEST_CASE("TP3_Chaine::ConversionCompositionTuples")
+{
+    Identite i = {"Smith", "John"};
+    Date d = {13, 07, 2003};
+    Personne p = {i, d};
 
- int erreur = 0;
+    int erreur = 0;
 
- try { std::cout << "p = " << chaine(p) << std::endl; }
- catch (const ExceptionChaine & e) { erreur=1; }
+    try
+    {
+        std::cout << "p = " << chaine(p) << std::endl;
+    }
+    catch (const ExceptionChaine &e)
+    {
+        erreur = 1;
+    }
 
- REQUIRE ( (chaine(p) == "Smith John 13 7 2003"
-            || chaine(p) == "Smith John  13 7 2003  ") == true );
+    REQUIRE((chaine(p) == "Smith John 13 7 2003" || chaine(p) == "Smith John  13 7 2003  ") == true);
 
- REQUIRE ( erreur == 0 );
-}*/
+    REQUIRE(erreur == 0);
+}
 
 //------------------------------------------------------------------------------------------------ 7
 /*TEST_CASE ( "TP3_Metaprog::Factorielle" ) {
