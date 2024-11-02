@@ -18,10 +18,9 @@ set ( PROJECT_HEADERS
       src/exceptionChaine.hpp
       #src/cosinus.hpp
       src/demangle.hpp
-      #src/exception.hpp
       #src/exponentielle.hpp
-      #src/factorielle.hpp
-      #src/puissance.hpp
+      src/factorielle.hpp
+      src/puissance.hpp
     )
 
 set ( PROJECT_SOURCES

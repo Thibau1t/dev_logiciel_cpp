@@ -8,6 +8,8 @@
 
 #include "exceptionChaine.hpp"
 #include "chaine.hpp"
+#include "factorielle.hpp"
+
 // #include <cosinus.hpp>
 // #include <exponentielle.hpp>
 
@@ -263,22 +265,25 @@ TEST_CASE("TP3_Chaine::ConversionCompositionTuples")
     REQUIRE(erreur == 0);
 }
 
+/*
 //------------------------------------------------------------------------------------------------ 7
-/*TEST_CASE ( "TP3_Metaprog::Factorielle" ) {
- unsigned long f1 = Factorielle<1>::valeur;
- unsigned long f5 = Factorielle<5>::valeur;
+TEST_CASE("TP3_Metaprog::Factorielle")
+{
+    unsigned long f1 = Factorielle<1>::valeur;
+    unsigned long f5 = Factorielle<5>::valeur;
 
- REQUIRE ( f1 == 1u );
- REQUIRE ( f5 == 5u*4u*3u*2u );
-}*/
+    REQUIRE(f1 == 1u);
+    REQUIRE(f5 == 5u * 4u * 3u * 2u);
+}
 
 //------------------------------------------------------------------------------------------------ 8
-/*TEST_CASE ( "TP3_Metaprog::Puissance" ) {
- REQUIRE ( Puissance<0>::valeur(3.0) == Approx(1.0) );
- REQUIRE ( Puissance<1>::valeur(3.0) == Approx(3.0) );
- REQUIRE ( Puissance<4>::valeur(3.0) == Approx(3.0*3.0*3.0*3.0) );
-}*/
-
+TEST_CASE("TP3_Metaprog::Puissance")
+{
+    REQUIRE(Puissance<0>::valeur(3.0) == Approx(1.0));
+    REQUIRE(Puissance<1>::valeur(3.0) == Approx(3.0));
+    REQUIRE(Puissance<4>::valeur(3.0) == Approx(3.0 * 3.0 * 3.0 * 3.0));
+}
+*/
 //------------------------------------------------------------------------------------------------ 9
 /*TEST_CASE ( "TP3_Metaprog::Exponentielle" ) {
  REQUIRE ( Exponentielle<4>::valeur(0.0) == Approx(std::exp(0.0)).epsilon(1e-3) );

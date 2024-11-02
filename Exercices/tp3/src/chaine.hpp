@@ -25,10 +25,7 @@ template <typename T, typename... Args>
 std::string chaine(const T &, const Args &...);
 
 template <typename Tuple, std::size_t... Is>
-std::string chaine_rec(const Tuple &, std::index_sequence<Is...>);
-
-template <typename... ARGS>
-std::string chaine(const std::tuple<ARGS...> &);
+std::string chaine_bis(const Tuple &, std::index_sequence<Is...>);
 
 // Implementation
 template <typename T>
@@ -57,24 +54,24 @@ std::string chaine(const double &x)
     return std::to_string(x);
 }
 
-template <typename T, typename... Args>
-std::string chaine(const T &first, const Args &...args)
+template <typename PREMIER, typename... RESTE>
+std::string chaine(const PREMIER &first, const RESTE &...args)
 {
-    return chaine(first) + " " + chaine(args...);
-    // return chaine(first) + (sizeof...(args) > 0 ? " " + chaine(args...) : "");
+    // return chaine(first) + " " + chaine(args...);
+    return chaine(first) + (sizeof...(args) > 0 ? " " + chaine(args...) : "");
 }
 
 // variadic tuple
-template <typename Tuple, std::size_t... Is>
-std::string chaine_rec(const Tuple &t, std::index_sequence<Is...>)
-{
-    return chaine(std::get<Is>(t)...);
-}
-
 template <typename... ARGS>
 std::string chaine(const std::tuple<ARGS...> &t)
 {
-    return chaine_rec(t, std::make_index_sequence<sizeof...(ARGS)>());
+    return chaine_bis(t, std::make_index_sequence<sizeof...(ARGS)>());
+}
+
+template <typename Tuple, std::size_t... Is>
+std::string chaine_bis(const Tuple &t, std::index_sequence<Is...>)
+{
+    return chaine(std::get<Is>(t)...);
 }
 
 #endif
