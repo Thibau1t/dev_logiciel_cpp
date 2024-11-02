@@ -1,6 +1,7 @@
 #ifndef __ZZ3_CPP_PUISSANCE__
 #define __ZZ3_CPP_PUISSANCE__
 
+// N == ^N
 template <int N>
 class Puissance
 {

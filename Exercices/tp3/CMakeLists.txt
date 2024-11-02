@@ -16,9 +16,9 @@ endif ()
 set ( PROJECT_HEADERS
       src/chaine.hpp
       src/exceptionChaine.hpp
-      #src/cosinus.hpp
+      src/cosinus.hpp
       src/demangle.hpp
-      #src/exponentielle.hpp
+      src/exponentielle.hpp
       src/factorielle.hpp
       src/puissance.hpp
     )

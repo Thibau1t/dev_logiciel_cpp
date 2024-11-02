@@ -21,8 +21,8 @@ std::string chaine(const std::string &);
 template <>
 std::string chaine(const double &);
 
-template <typename T, typename... Args>
-std::string chaine(const T &, const Args &...);
+template <typename PREMIER, typename... RESTE>
+std::string chaine(const PREMIER &, const RESTE &...);
 
 template <typename... ARGS>
 std::string chaine(const std::tuple<ARGS...> &);
