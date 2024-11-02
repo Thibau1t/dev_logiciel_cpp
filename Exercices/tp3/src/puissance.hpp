@@ -2,15 +2,33 @@
 #define __ZZ3_CPP_PUISSANCE__
 
 template <int N>
-struct Puissance
+class Puissance
 {
-    static const unsigned long valeur = N * Factorielle<N - 1>::valeur;
+public:
+    static double valeur(const double &v)
+    {
+        return Puissance<N - 1>::valeur(v) * v;
+    }
 };
 
 template <>
-struct Puissance<0>
+class Puissance<0>
 {
-    static const unsigned long valeur = 1;
+public:
+    static double valeur(const double &)
+    {
+        return 1;
+    }
+};
+
+template <>
+class Puissance<1>
+{
+public:
+    static double valeur(const double &v)
+    {
+        return v;
+    }
 };
 
 #endif

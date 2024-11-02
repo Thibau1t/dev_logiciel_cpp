@@ -9,6 +9,7 @@
 #include "exceptionChaine.hpp"
 #include "chaine.hpp"
 #include "factorielle.hpp"
+#include "puissance.hpp"
 
 // #include <cosinus.hpp>
 // #include <exponentielle.hpp>
@@ -265,7 +266,6 @@ TEST_CASE("TP3_Chaine::ConversionCompositionTuples")
     REQUIRE(erreur == 0);
 }
 
-/*
 //------------------------------------------------------------------------------------------------ 7
 TEST_CASE("TP3_Metaprog::Factorielle")
 {
@@ -283,7 +283,7 @@ TEST_CASE("TP3_Metaprog::Puissance")
     REQUIRE(Puissance<1>::valeur(3.0) == Approx(3.0));
     REQUIRE(Puissance<4>::valeur(3.0) == Approx(3.0 * 3.0 * 3.0 * 3.0));
 }
-*/
+
 //------------------------------------------------------------------------------------------------ 9
 /*TEST_CASE ( "TP3_Metaprog::Exponentielle" ) {
  REQUIRE ( Exponentielle<4>::valeur(0.0) == Approx(std::exp(0.0)).epsilon(1e-3) );

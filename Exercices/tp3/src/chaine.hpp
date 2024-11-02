@@ -24,6 +24,9 @@ std::string chaine(const double &);
 template <typename T, typename... Args>
 std::string chaine(const T &, const Args &...);
 
+template <typename... ARGS>
+std::string chaine(const std::tuple<ARGS...> &);
+
 template <typename Tuple, std::size_t... Is>
 std::string chaine_bis(const Tuple &, std::index_sequence<Is...>);
 

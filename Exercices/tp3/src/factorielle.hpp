@@ -4,8 +4,12 @@
 template <int N>
 struct Factorielle
 {
-    static const unsigned long valeur = N * Factorielle<N - 1>::valeur;
+public:
+    static const unsigned long valeur;
 };
+
+template <int N>
+const unsigned long Factorielle<N>::valeur = N * Factorielle<N - 1>::valeur;
 
 template <>
 struct Factorielle<0>
