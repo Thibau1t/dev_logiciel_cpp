@@ -17,78 +17,82 @@
 //------------------------------------------------------------------------------------------------ 1
 TEST_CASE("TP5_Valeur::Constructeur")
 {
-  const double a = 12.0;
+	const double a = 12.0;
 
-  Valeur v(a);
+	Valeur v(a);
 
-  REQUIRE(v.getNombre() == Approx(a));
+	REQUIRE(v.getNombre() == Approx(a));
 }
 
 //------------------------------------------------------------------------------------------------ 2
 TEST_CASE("TP5_Valeur::ConstructeurDefaut")
 {
-  Valeur v;
+	Valeur v;
 
-  REQUIRE(v.getNombre() == Approx(0.0));
+	REQUIRE(v.getNombre() == Approx(0.0));
 }
 
 //------------------------------------------------------------------------------------------------ 3
 TEST_CASE("TP5_Valeur::Accesseurs")
 {
-  const double a = 12.0;
+	const double a = 12.0;
 
-  Valeur v(13.0);
+	Valeur v(13.0);
 
-  v.setNombre(a);
+	v.setNombre(a);
 
-  REQUIRE(v.getNombre() == Approx(a));
+	REQUIRE(v.getNombre() == Approx(a));
 }
 
 //------------------------------------------------------------------------------------------------ 4
 TEST_CASE("TP5_Valeur::AccesseursConstants")
 {
-  const Valeur v;
+	const Valeur v;
 
-  REQUIRE(v.getNombre() == Approx(0.0));
+	REQUIRE(v.getNombre() == Approx(0.0));
 }
 
 //------------------------------------------------------------------------------------------------ 5
 TEST_CASE("TP5_Echantillon::Constructeur")
 {
-  Echantillon e;
+	Echantillon e;
 
-  REQUIRE(e.getTaille() == 0u);
+	REQUIRE(e.getTaille() == 0u);
 }
 
 //------------------------------------------------------------------------------------------------ 6
 TEST_CASE("TP5_Echantillon::Ajout")
 {
-  Echantillon e;
+	Echantillon e;
 
-  double v[] = {5.0, 10.0, 15.0, 20.0};
+	double v[] = {5.0, 10.0, 15.0, 20.0};
 
-  for (unsigned i = 0; i < 4; ++i)
-    e.ajouter(v[i]);
+	for (unsigned i = 0; i < 4; ++i)
+		e.ajouter(v[i]);
 
-  REQUIRE(e.getTaille() == 4u);
+	REQUIRE(e.getTaille() == 4u);
 }
 //------------------------------------------------------------------------------------------------ 7
-/*TEST_CASE ( "TP5_Echantillon::MinMax" ) {
- Echantillon e;
+TEST_CASE("TP5_Echantillon::MinMax")
+{
+	Echantillon e;
 
- double v[] = { 5.0, 10.0, 15.0, 20.0 };
- double min = v[0];
- double max = v[0];
+	double v[] = {5.0, 10.0, 15.0, 20.0};
+	double min = v[0];
+	double max = v[0];
 
- for (unsigned i = 0; i<4; ++i) {
-  e.ajouter(v[i]);
-  if (v[i]<min) min=v[i];
-  if (v[i]>max) max=v[i];
- }
+	for (unsigned i = 0; i < 4; ++i)
+	{
+		e.ajouter(v[i]);
+		if (v[i] < min)
+			min = v[i];
+		if (v[i] > max)
+			max = v[i];
+	}
 
- REQUIRE ( e.getMinimum().getNombre() == Approx(min) );
- REQUIRE ( e.getMaximum().getNombre() == Approx(max) );
-}*/
+	REQUIRE(e.getMinimum().getNombre() == Approx(min));
+	REQUIRE(e.getMaximum().getNombre() == Approx(max));
+}
 
 //------------------------------------------------------------------------------------------------ 8
 /*TEST_CASE ( "TP5_Echantillon::MinMaxException" ) {
@@ -396,10 +400,10 @@ TEST_CASE("TP5_Echantillon::Ajout")
  for (unsigned i = 0; i<10; ++i) h.ajouter(v[i]);
 
  std::vector<double> notes[] = { { 5.0, 6.0, 5.5 },
-                                 { 7.0, 8.0 },
-                                 { 9.0, 10.0 },
-                                 {},
-                                 { 14.0, 13.0, 13.5 } };
+								 { 7.0, 8.0 },
+								 { 9.0, 10.0 },
+								 {},
+								 { 14.0, 13.0, 13.5 } };
 
  unsigned i = 0;
 

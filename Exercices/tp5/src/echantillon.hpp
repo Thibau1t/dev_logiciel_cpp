@@ -2,6 +2,7 @@
 #define __ZZ__CPP__ECHANTILLON__
 
 #include <vector>
+#include <algorithm>
 
 #include "valeur.hpp"
 
@@ -16,6 +17,9 @@ public:
     unsigned int getTaille() const;
 
     void ajouter(const double &);
+
+    Valeur getMinimum() const;
+    Valeur getMaximum() const;
 };
 
 #endif
