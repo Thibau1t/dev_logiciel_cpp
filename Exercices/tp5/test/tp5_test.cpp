@@ -4,6 +4,7 @@
 #include <cmath>
 
 #include "valeur.hpp"
+#include "echantillon.hpp"
 
 // #include <histogramme.hpp>
 // #include <comparateur.hpp>
@@ -52,11 +53,12 @@ TEST_CASE("TP5_Valeur::AccesseursConstants")
 }
 
 //------------------------------------------------------------------------------------------------ 5
-/*TEST_CASE ( "TP5_Echantillon::Constructeur" ) {
- Echantillon e;
+TEST_CASE("TP5_Echantillon::Constructeur")
+{
+  Echantillon e;
 
- REQUIRE ( e.getTaille() == 0u );
-}*/
+  REQUIRE(e.getTaille() == 0u);
+}
 
 //------------------------------------------------------------------------------------------------ 6
 /*TEST_CASE ( "TP5_Echantillon::Ajout" ) {

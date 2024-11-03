@@ -17,14 +17,14 @@ set ( PROJECT_HEADERS
       src/exemple.hpp
       #src/classe.hpp
       #src/comparateur.hpp
-      #src/echantillon.hpp
+      src/echantillon.hpp
       #src/histogramme.hpp
       #src/valeur.hpp
     )
 
 set ( PROJECT_SOURCES
       src/valeur.cpp
-      
+      src/echantillon.cpp
     )
 
 set ( TEST_HEADERS
