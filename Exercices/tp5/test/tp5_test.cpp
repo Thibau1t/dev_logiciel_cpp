@@ -95,27 +95,46 @@ TEST_CASE("TP5_Echantillon::MinMax")
 }
 
 //------------------------------------------------------------------------------------------------ 8
-/*TEST_CASE ( "TP5_Echantillon::MinMaxException" ) {
- Echantillon e;
+TEST_CASE("TP5_Echantillon::MinMaxException")
+{
+	Echantillon e;
 
- int error = 0;
+	int error = 0;
 
- try { e.getMinimum().getNombre(); }
+	try
+	{
+		e.getMinimum().getNombre();
+	}
 
- catch (const std::domain_error & e) { error=2; }
- catch (...) { error=1; }
+	catch (const std::domain_error &e)
+	{
+		error = 2;
+	}
+	catch (...)
+	{
+		error = 1;
+	}
 
- REQUIRE ( error == 2 );
+	REQUIRE(error == 2);
 
- error=0;
+	error = 0;
 
- try { e.getMaximum().getNombre(); }
+	try
+	{
+		e.getMaximum().getNombre();
+	}
 
- catch (const std::domain_error & e) { error=2; }
- catch (...) { error=1; }
+	catch (const std::domain_error &e)
+	{
+		error = 2;
+	}
+	catch (...)
+	{
+		error = 1;
+	}
 
- REQUIRE ( error == 2 );
-}*/
+	REQUIRE(error == 2);
+}
 
 //------------------------------------------------------------------------------------------------ 9
 /*TEST_CASE ( "TP5_Echantillon::Indice" ) {

@@ -11,7 +11,7 @@ void Echantillon::ajouter(const double &v)
 Valeur Echantillon::getMinimum() const
 {
     if (_valeurs.empty())
-        throw std::length_error("Erreur : le tableau est vide !");
+        throw std::domain_error("Erreur : le tableau est vide !");
 
     return *(std::min_element(_valeurs.begin(), _valeurs.end(), [](const Valeur &a, const Valeur &b)
                               { return a.getNombre() < b.getNombre(); }));
@@ -19,7 +19,7 @@ Valeur Echantillon::getMinimum() const
 Valeur Echantillon::getMaximum() const
 {
     if (_valeurs.empty())
-        throw std::length_error("Erreur : le tableau est vide !");
+        throw std::domain_error("Erreur : le tableau est vide !");
 
     return *(std::max_element(_valeurs.begin(), _valeurs.end(), [](const Valeur &a, const Valeur &b)
                               { return a.getNombre() < b.getNombre(); }));
