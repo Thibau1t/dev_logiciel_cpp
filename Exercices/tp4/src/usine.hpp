@@ -8,9 +8,15 @@
 class UsineCarte
 {
 private:
-    inline static unsigned int _compteur = 0;
+    mutable unsigned int _compteur = 0;
+    unsigned int _taille;
+
+    // supression constructeur par copie et d'affectation
+    UsineCarte(const UsineCarte &) = delete;
+    UsineCarte &operator=(const UsineCarte &) = delete;
 
 public:
+    explicit UsineCarte(unsigned int n = 52);
     std::unique_ptr<Carte> getCarte() const;
 };
 

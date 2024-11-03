@@ -1,13 +1,15 @@
 #include "usine.hpp"
 
+UsineCarte::UsineCarte(unsigned int n)
+{
+    _taille = n;
+}
+
 std::unique_ptr<Carte> UsineCarte::getCarte() const
 {
-    std::unique_ptr<Carte> p = nullptr;
-
-    if (_compteur < 52) // unsigned int donc tjr >=0
+    if (_compteur < _taille) // pas besoin de regarder >=0 car usigned int
     {
-        p = std::make_unique<Carte>(_compteur);
-        ++_compteur;
+        return std::unique_ptr<Carte>(new Carte(_compteur++));
     }
-    return p;
+    return nullptr;
 }
