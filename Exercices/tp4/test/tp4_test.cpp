@@ -1,6 +1,7 @@
 // Entetes //---------------------------------------------------------------------------------------
 #include "catch.hpp"
 
+#include <iostream>
 #include <sstream>
 #include <type_traits>
 
@@ -116,28 +117,29 @@ TEST_CASE("TP4_Carte::PaquetFlux")
 }
 
 //------------------------------------------------------------------------------------------------ 7
-/*TEST_CASE ( "TP4_Carte::CarteDestruction" ) {
- REQUIRE ( Carte::getCompteur() == 0 );
+TEST_CASE("TP4_Carte::CarteDestruction")
+{
+    REQUIRE(Carte::getCompteur() == 0);
 
- {
-  const unsigned n = 52;
+    {
+        const unsigned n = 52;
 
-  UsineCarte usine(n);
-  paquet_t paquet;
+        UsineCarte usine(n);
+        paquet_t paquet;
 
-  REQUIRE ( Carte::getCompteur() == 0 );
+        REQUIRE(Carte::getCompteur() == 0);
 
-  remplir(paquet,usine);
+        remplir(paquet, usine);
 
-  REQUIRE ( Carte::getCompteur() == n );
+        REQUIRE(Carte::getCompteur() == n);
 
-  std::cout << paquet << std::endl;
+        std::cout << paquet << std::endl;
 
-  REQUIRE ( Carte::getCompteur() == n );
- }
+        REQUIRE(Carte::getCompteur() == n);
+    }
 
- REQUIRE ( Carte::getCompteur() == 0 );
-}*/
+    REQUIRE(Carte::getCompteur() == 0);
+}
 
 //------------------------------------------------------------------------------------------------ 8
 /*TEST_CASE ( "TP4_Conso::Ressource" ) {
