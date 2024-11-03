@@ -4,43 +4,53 @@
 #include <sstream>
 #include <type_traits>
 
-//#include <paquet.hpp>
-//#include <consommateur.hpp>
+#include "carte.hpp"
+#include "usine.hpp"
+
+// #include <paquet.hpp>
+// #include <consommateur.hpp>
 
 // Tests //-----------------------------------------------------------------------------------------
 
-template <typename T,typename = void> struct has_public_constructor : std::false_type {};
+template <typename T, typename = void>
+struct has_public_constructor : std::false_type
+{
+};
 
 template <typename T>
-struct has_public_constructor< T,
-                               std::enable_if_t<std::is_same<T,decltype(T(1))>::value>
-                             > : std::true_type {};
+struct has_public_constructor<T,
+                              std::enable_if_t<std::is_same<T, decltype(T(1))>::value>> : std::true_type
+{
+};
 
 //------------------------------------------------------------------------------------------------ 1
-/*TEST_CASE ( "TP4_Carte::Usine52" ) {
- UsineCarte usine;
+TEST_CASE("TP4_Carte::Usine52")
+{
+    UsineCarte usine;
 
- for (unsigned i = 0; i<52; ++i) {
-  std::unique_ptr<Carte> carte(usine.getCarte());
+    for (unsigned i = 0; i < 52; ++i)
+    {
+        std::unique_ptr<Carte> carte(usine.getCarte());
 
-  REQUIRE ( carte->getValeur() == i );
- }
+        REQUIRE(carte->getValeur() == i);
+    }
 
- REQUIRE ( usine.getCarte() == nullptr );
-}*/
-
+    REQUIRE(usine.getCarte() == nullptr);
+}
+/*
 //------------------------------------------------------------------------------------------------ 2
-/*TEST_CASE ( "TP4_Carte::CarteInterface" ) {
- // Contructeur de copie existe ?
- REQUIRE ( std::is_copy_constructible<Carte>::value == false );
+TEST_CASE("TP4_Carte::CarteInterface")
+{
+    // Contructeur de copie existe ?
+    REQUIRE(std::is_copy_constructible<Carte>::value == false);
 
- // Operateur d'affectation par copie existe ?
- REQUIRE ( std::is_copy_assignable<Carte>::value == false );
+    // Operateur d'affectation par copie existe ?
+    REQUIRE(std::is_copy_assignable<Carte>::value == false);
 
- // Constructeur ad hoc existe ?
- REQUIRE ( has_public_constructor<Carte>::value == false );
-}*/
-
+    // Constructeur ad hoc existe ?
+    REQUIRE(has_public_constructor<Carte>::value == false);
+}
+*/
 //------------------------------------------------------------------------------------------------ 3
 /*TEST_CASE ( "TP4_Carte::UsineInterface" ) {
  // Contructeur de copie existe ?

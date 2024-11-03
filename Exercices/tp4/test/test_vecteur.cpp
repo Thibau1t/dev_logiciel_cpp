@@ -3,6 +3,35 @@
 #include <deque>
 #include <vecteur.hpp>
 
+/*
+Avant
+❯ ./tp4_vecteur
+[0] affectations = 0 ; constructions = 0 ; copies = 0 ; mouvements = 0
+
+v1 = (0;0) (0;0) (0;0) (0;0) (0;0) (0;0) (0;0) (0;0) (0;0) (0;0)
+v2 = (0;0) (0;0) (0;0) (0;0) (0;0) (0;0) (0;0) (0;0) (0;0) (0;0)
+[1] affectations = 0 ; constructions = 20 ; copies = 0 ; mouvements = 0
+
+v1 = (0;0) (10;1) (20;4) (30;9) (40;16) (50;25) (60;36) (70;49) (80;64) (90;81)
+v2 = (0;1) (1;2) (2;3) (3;4) (4;5) (5;6) (6;7) (7;8) (8;9) (9;10)
+[2] affectations = 20 ; constructions = 40 ; copies = 0 ; mouvements = 20
+
+v3 = (0;0) (10;1) (20;4) (30;9) (40;16) (50;25) (60;36) (70;49) (80;64) (90;81)
+[3] affectations = 30 ; constructions = 50 ; copies = 10 ; mouvements = 20
+
+v4 = (0;1) (11;3) (22;7) (33;13) (44;21) (55;31) (66;43) (77;57) (88;73) (99;91)
+[4] affectations = 50 ; constructions = 80 ; copies = 20 ; mouvements = 30
+
+v5 = (0;0) (115;62) (440;296) (927;834) (1504;1808) (2075;3350) (2520;5592) (2695;8666) (2432;12704) (1539;17838)
+[5] affectations = 80 ; constructions = 130 ; copies = 30 ; mouvements = 50
+
+liste = v5
+[6] affectations = 80 ; constructions = 140 ; copies = 40 ; mouvements = 50
+
+(0;0) (115;62) (440;296) (927;834) (1504;1808) (1539;17838) (2075;3350) (2432;12704) (2520;5592) (2695;8666)
+[7] affectations = 95 ; constructions = 149 ; copies = 40 ; mouvements = 74
+*/
+
 // Fonction principale //---------------------------------------------------------------------------
 int main(void)
 {
