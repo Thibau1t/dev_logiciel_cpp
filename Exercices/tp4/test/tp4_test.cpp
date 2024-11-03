@@ -7,7 +7,9 @@
 
 #include "carte.hpp"
 #include "usine.hpp"
-#include <paquet.hpp>
+#include "paquet.hpp"
+#include "ressource.hpp"
+
 // #include <consommateur.hpp>
 
 // Tests //-----------------------------------------------------------------------------------------
@@ -142,15 +144,16 @@ TEST_CASE("TP4_Carte::CarteDestruction")
 }
 
 //------------------------------------------------------------------------------------------------ 8
-/*TEST_CASE ( "TP4_Conso::Ressource" ) {
- Ressource r(17);
+TEST_CASE("TP4_Conso::Ressource")
+{
+    Ressource r(17);
 
- REQUIRE ( r.getStock() == 17 );
+    REQUIRE(r.getStock() == 17);
 
- r.consommer(6);
+    r.consommer(6);
 
- REQUIRE ( r.getStock() == 11 );
-}*/
+    REQUIRE(r.getStock() == 11);
+}
 
 //------------------------------------------------------------------------------------------------ 9
 /*TEST_CASE ( "TP4_Conso::Consommateur" ) {

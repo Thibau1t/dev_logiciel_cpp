@@ -1,4 +1,3 @@
-# Project #-----------------------------------------------------------------------------------------
 cmake_minimum_required ( VERSION 3.18 )
 
 project ( tp4 CXX )
@@ -19,14 +18,14 @@ set ( PROJECT_HEADERS
       #src/consommateur.hpp
       src/mouchard.hpp
       src/paquet.hpp
-      #src/ressource.hpp
+      src/ressource.hpp
       src/usine.hpp
       src/vecteur.hpp
     )
 
 set ( PROJECT_SOURCES
       src/carte.cpp
-      #src/ressource.cpp
+      src/ressource.cpp  # Assurez-vous que ce fichier est ici
       src/usine.cpp
     )
 
