@@ -2,6 +2,7 @@
 #define __ZZ__CPP__PAQUET__
 
 #include <vector>
+#include <ostream>
 
 #include "usine.hpp"
 
@@ -13,6 +14,15 @@ void remplir(paquet_t &p, const UsineCarte &u)
     {
         p.push_back(std::move(carte));
     }
+}
+
+std::ostream &operator<<(std::ostream &os, const paquet_t &p)
+{
+    for (const auto &carte : p)
+    {
+        os << carte->getValeur() << " ";
+    }
+    return os;
 }
 
 #endif

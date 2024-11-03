@@ -94,24 +94,26 @@ TEST_CASE("TP4_Carte::PaquetRemplir")
 }
 
 //------------------------------------------------------------------------------------------------ 6
-/*TEST_CASE ( "TP4_Carte::PaquetFlux" ) {
- const unsigned n = 27;
+TEST_CASE("TP4_Carte::PaquetFlux")
+{
+    const unsigned n = 27;
 
- paquet_t paquet;
- UsineCarte usine(n);
+    paquet_t paquet;
+    UsineCarte usine(n);
 
- remplir(paquet,usine);
+    remplir(paquet, usine);
 
- std::stringstream s1;
+    std::stringstream s1;
 
- s1 << paquet;
+    s1 << paquet;
 
- std::stringstream s2;
+    std::stringstream s2;
 
- for (unsigned i = 0; i<n; ++i) s2 << paquet[i]->getValeur() << " ";
+    for (unsigned i = 0; i < n; ++i)
+        s2 << paquet[i]->getValeur() << " ";
 
- REQUIRE (s1.str() == s2.str());
-}*/
+    REQUIRE(s1.str() == s2.str());
+}
 
 //------------------------------------------------------------------------------------------------ 7
 /*TEST_CASE ( "TP4_Carte::CarteDestruction" ) {
