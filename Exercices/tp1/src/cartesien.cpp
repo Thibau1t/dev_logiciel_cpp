@@ -1,39 +1,47 @@
 #include "cartesien.hpp"
 #include "polaire.hpp"
 
-Cartesien::Cartesien(const double x, const double y) : _x(x), _y(y) {
+Cartesien::Cartesien(const double x, const double y) : _x(x), _y(y)
+{
 }
 
-Cartesien::Cartesien(const Polaire & p) {
+Cartesien::Cartesien(const Polaire &p)
+{
     p.convertir(*this);
 }
 
-Point* Cartesien::clone() const {
+Point *Cartesien::clone() const
+{
     return new Cartesien(*this);
 }
 
-
-double Cartesien::getX() const {
+double Cartesien::getX() const
+{
     return _x;
 }
 
-double Cartesien::getY() const {
+double Cartesien::getY() const
+{
     return _y;
 }
 
-void Cartesien::setX(const double x) {
+void Cartesien::setX(const double x)
+{
     _x = x;
 }
 
-void Cartesien::setY(const double y) {
+void Cartesien::setY(const double y)
+{
     _y = y;
 }
 
-void Cartesien::afficher(std::ostream & os) const {
+void Cartesien::afficher(std::ostream &os) const
+{
     os << "(x=" << _x << ";y=" << _y << ")";
 }
 
-void Cartesien::convertir(Polaire & p) const {
+void Cartesien::convertir(Polaire &p) const
+{
     double distance = sqrt(_x * _x + _y * _y);
     double angle = atan2(_y, _x);
 
@@ -42,11 +50,13 @@ void Cartesien::convertir(Polaire & p) const {
     p.setDistance(distance);
     p.setAngle(angle);
 }
-void Cartesien::convertir(Cartesien& c) const {
+void Cartesien::convertir(Cartesien &c) const
+{
     c = *this;
 }
 
-std::istream & operator>>(std::istream& flux, Cartesien & c){
+std::istream &operator>>(std::istream &flux, Cartesien &c)
+{
     double x, y;
     flux >> x >> y;
     c.setX(x);
