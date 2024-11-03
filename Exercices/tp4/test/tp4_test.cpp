@@ -190,65 +190,69 @@ TEST_CASE("TP4_Conso::RessoureEpuisee")
 }
 
 //----------------------------------------------------------------------------------------------- 11
-/*TEST_CASE ( "TP4_Conso::SurveillanceRessources" ) {
- // std::shared_ptr<Ressource> r1(new Ressource(14));
- // std::shared_ptr<Ressource> r2(new Ressource(7));
- // std::shared_ptr<Ressource> r3(new Ressource(13));
- // std::shared_ptr<Ressource> r4(new Ressource(25));
- auto r1 = std::make_shared<Ressource>(14);
- auto r2 = std::make_shared<Ressource>(7);
- auto r3 = std::make_shared<Ressource>(13);
- auto r4 = std::make_shared<Ressource>(25);
+TEST_CASE("TP4_Conso::SurveillanceRessources")
+{
+    // std::shared_ptr<Ressource> r1(new Ressource(14));
+    // std::shared_ptr<Ressource> r2(new Ressource(7));
+    // std::shared_ptr<Ressource> r3(new Ressource(13));
+    // std::shared_ptr<Ressource> r4(new Ressource(25));
+    auto r1 = std::make_shared<Ressource>(14);
+    auto r2 = std::make_shared<Ressource>(7);
+    auto r3 = std::make_shared<Ressource>(13);
+    auto r4 = std::make_shared<Ressource>(25);
 
- ressources_t ressources;
+    ressources_t ressources;
 
- ressources.push_back(r1);
- ressources.push_back(r2);
- ressources.push_back(r3);
- ressources.push_back(r4);
+    ressources.push_back(r1);
+    ressources.push_back(r2);
+    ressources.push_back(r3);
+    ressources.push_back(r4);
 
- std::vector<Consommateur> consommateurs;
+    std::vector<Consommateur> consommateurs;
 
- consommateurs.push_back(Consommateur(3,r1));
- consommateurs.push_back(Consommateur(2,r2));
- consommateurs.push_back(Consommateur(1,r1));
- consommateurs.push_back(Consommateur(4,r4));
- consommateurs.push_back(Consommateur(2,r3));
- consommateurs.push_back(Consommateur(2,r4));
+    consommateurs.push_back(Consommateur(3, r1));
+    consommateurs.push_back(Consommateur(2, r2));
+    consommateurs.push_back(Consommateur(1, r1));
+    consommateurs.push_back(Consommateur(4, r4));
+    consommateurs.push_back(Consommateur(2, r3));
+    consommateurs.push_back(Consommateur(2, r4));
 
- r1=nullptr;
- r2=nullptr;
- r3=nullptr;
- r4=nullptr;
+    r1 = nullptr;
+    r2 = nullptr;
+    r3 = nullptr;
+    r4 = nullptr;
 
- REQUIRE ( ressources[0].use_count() == 2 );
- REQUIRE ( ressources[1].use_count() == 1 );
- REQUIRE ( ressources[2].use_count() == 1 );
- REQUIRE ( ressources[3].use_count() == 2 );
+    REQUIRE(ressources[0].use_count() == 2);
+    REQUIRE(ressources[1].use_count() == 1);
+    REQUIRE(ressources[2].use_count() == 1);
+    REQUIRE(ressources[3].use_count() == 2);
 
- std::vector<std::string> etats = { "14 7 13 25 ",
-                                    "10 5 11 19 ",
-                                    "6 3 9 13 ",
-                                    "2 1 7 7 ",
-                                    "- - 5 1 ",
-                                    "- - 3 - ",
-                                    "- - 1 - ",
-                                    "- - - - " };
+    std::vector<std::string> etats = {"14 7 13 25 ",
+                                      "10 5 11 19 ",
+                                      "6 3 9 13 ",
+                                      "2 1 7 7 ",
+                                      "- - 5 1 ",
+                                      "- - 3 - ",
+                                      "- - 1 - ",
+                                      "- - - - "};
 
- for (unsigned i = 0; i<etats.size(); ++i) {
-  std::stringstream s;
+    for (unsigned i = 0; i < etats.size(); ++i)
+    {
+        std::stringstream s;
 
-  s << ressources;
-  std::cout << ressources << std::endl;
+        s << ressources;
+        std::cout << ressources << std::endl;
 
-  REQUIRE ( s.str() == etats[i] );
+        REQUIRE(s.str() == etats[i]);
 
-  for (unsigned j = 0; j<consommateurs.size(); ++j) consommateurs[j].puiser();
- }
+        for (unsigned j = 0; j < consommateurs.size(); ++j)
+            consommateurs[j].puiser();
+    }
 
- for (unsigned i = 0; i<4; ++i) {
-  REQUIRE ( ressources[i].use_count() == 0 );
- }
-}*/
+    for (unsigned i = 0; i < 4; ++i)
+    {
+        REQUIRE(ressources[i].use_count() == 0);
+    }
+}
 
 // Fin //-------------------------------------------------------------------------------------------

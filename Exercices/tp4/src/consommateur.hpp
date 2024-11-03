@@ -7,7 +7,7 @@
 
 class Consommateur
 {
-    using shared_pr = typename std::shared_ptr<Ressource>;
+    using shared_pr = std::shared_ptr<Ressource>;
 
 private:
     unsigned int _besoin;

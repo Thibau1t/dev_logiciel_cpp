@@ -18,3 +18,19 @@ int Ressource::getStock() const
 {
     return _stock;
 }
+
+std::ostream &operator<<(std::ostream &os, const ressources_t &r)
+{
+    for (const auto &ressource : r)
+    {
+        if (auto res = ressource.lock())
+        {
+            os << res->getStock() << " ";
+        }
+        else
+        {
+            os << "- ";
+        }
+    }
+    return os;
+}
