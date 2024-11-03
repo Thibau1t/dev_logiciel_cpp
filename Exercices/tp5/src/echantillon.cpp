@@ -1,5 +1,8 @@
 #include "echantillon.hpp"
 
-Echantillon::Echantillon(const unsigned int t) : _taille(t) {}
+unsigned int Echantillon::getTaille() const { return _valeurs.size(); }
 
-unsigned int Echantillon::getTaille() const { return _taille; }
+void Echantillon::ajouter(const double &v)
+{
+    _valeurs.push_back(v);
+}

@@ -1,15 +1,21 @@
 #ifndef __ZZ__CPP__ECHANTILLON_
 #define __ZZ__CPP__ECHANTILLON__
 
+#include <vector>
+
+#include "valeur.hpp"
+
 class Echantillon
 {
 private:
-    unsigned int _taille;
+    std::vector<Valeur> _valeurs;
 
 public:
-    Echantillon(const unsigned int t = 0);
+    Echantillon() = default;
 
     unsigned int getTaille() const;
+
+    void ajouter(const double &);
 };
 
 #endif

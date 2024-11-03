@@ -61,16 +61,17 @@ TEST_CASE("TP5_Echantillon::Constructeur")
 }
 
 //------------------------------------------------------------------------------------------------ 6
-/*TEST_CASE ( "TP5_Echantillon::Ajout" ) {
- Echantillon e;
+TEST_CASE("TP5_Echantillon::Ajout")
+{
+  Echantillon e;
 
- double v[] = { 5.0, 10.0, 15.0, 20.0 };
+  double v[] = {5.0, 10.0, 15.0, 20.0};
 
- for (unsigned i = 0; i<4; ++i) e.ajouter(v[i]);
+  for (unsigned i = 0; i < 4; ++i)
+    e.ajouter(v[i]);
 
- REQUIRE ( e.getTaille() == 4u );
-}*/
-
+  REQUIRE(e.getTaille() == 4u);
+}
 //------------------------------------------------------------------------------------------------ 7
 /*TEST_CASE ( "TP5_Echantillon::MinMax" ) {
  Echantillon e;
