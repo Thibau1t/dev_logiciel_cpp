@@ -1,5 +1,7 @@
-#ifndef __ZZ__CPP__CLASSE_
+#ifndef __ZZ__CPP__CLASSE__
 #define __ZZ__CPP__CLASSE__
+
+// #pragma once
 
 #include <vector>
 

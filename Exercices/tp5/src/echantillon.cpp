@@ -1,5 +1,4 @@
 #include "echantillon.hpp"
-#include <iostream>
 
 unsigned int Echantillon::getTaille() const { return _valeurs.size(); }
 

@@ -6,8 +6,7 @@
 #include "valeur.hpp"
 #include "echantillon.hpp"
 #include "classe.hpp"
-
-// #include <histogramme.hpp>
+#include "histogramme.hpp"
 // #include <comparateur.hpp>
 
 // using Histo = Histogramme; // A utiliser pour les tests 12-13
@@ -215,23 +214,25 @@ TEST_CASE("TP5_Classe::Accesseurs")
 }
 
 //----------------------------------------------------------------------------------------------- 12
-/*TEST_CASE ( "TP5_Histogramme::Constructeur" ) {
- Histo h(5.0,15.0,5);
+TEST_CASE("TP5_Histogramme::Constructeur")
+{
+	Histo h(5.0, 15.0, 5);
 
- double bornesInf[] = { 5.0, 7.0,  9.0, 11.0, 13.0 };
- double bornesSup[] = { 7.0, 9.0, 11.0, 13.0, 15.0 };
+	double bornesInf[] = {5.0, 7.0, 9.0, 11.0, 13.0};
+	double bornesSup[] = {7.0, 9.0, 11.0, 13.0, 15.0};
 
- REQUIRE ( h.getClasses().size() == 5u );
+	REQUIRE(h.getClasses().size() == 5u);
 
- unsigned i = 0;
+	unsigned i = 0;
 
- for (const Classe & c : h.getClasses()) {
-  REQUIRE ( c.getBorneInf() == Approx(bornesInf[i]) );
-  REQUIRE ( c.getBorneSup() == Approx(bornesSup[i]) );
-  REQUIRE ( c.getQuantite() == 0u );
-  ++i;
- }
-}*/
+	for (const Classe &c : h.getClasses())
+	{
+		REQUIRE(c.getBorneInf() == Approx(bornesInf[i]));
+		REQUIRE(c.getBorneSup() == Approx(bornesSup[i]));
+		REQUIRE(c.getQuantite() == 0u);
+		++i;
+	}
+}
 
 //----------------------------------------------------------------------------------------------- 13
 /*TEST_CASE ( "TP5_Histogramme::Echantillon" ) {
