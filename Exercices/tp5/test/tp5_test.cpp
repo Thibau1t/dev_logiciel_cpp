@@ -137,31 +137,46 @@ TEST_CASE("TP5_Echantillon::MinMaxException")
 }
 
 //------------------------------------------------------------------------------------------------ 9
-/*TEST_CASE ( "TP5_Echantillon::Indice" ) {
- Echantillon e;
+TEST_CASE("TP5_Echantillon::Indice")
+{
+	Echantillon e;
 
- double v[] = { 5.0, 10.0, 15.0, 20.0 };
+	double v[] = {5.0, 10.0, 15.0, 20.0};
 
- for (unsigned i = 0; i<4; ++i) e.ajouter(v[i]);
+	for (unsigned i = 0; i < 4; ++i)
+		e.ajouter(v[i]);
 
- int error = 0;
+	int error = 0;
 
- try {
-  for (unsigned i = 0; i<4; ++i)
-   REQUIRE ( e.getValeur(i).getNombre() == Approx(v[i]) );
- }
+	try
+	{
+		for (unsigned i = 0; i < 4; ++i)
+			REQUIRE(e.getValeur(i).getNombre() == Approx(v[i]));
+	}
 
- catch (...) { error=1; }
+	catch (...)
+	{
+		error = 1;
+	}
 
- REQUIRE ( error == 0 );
+	REQUIRE(error == 0);
 
- try { e.getValeur(e.getTaille()); }
+	try
+	{
+		e.getValeur(e.getTaille());
+	}
 
- catch (const std::out_of_range & e) { error=2; }
- catch (...) { error=1; }
+	catch (const std::out_of_range &e)
+	{
+		error = 2;
+	}
+	catch (...)
+	{
+		error = 1;
+	}
 
- REQUIRE ( error == 2 );
-}*/
+	REQUIRE(error == 2);
+}
 
 //----------------------------------------------------------------------------------------------- 10
 /*TEST_CASE ( "TP5_Classe::Constructeur" ) {

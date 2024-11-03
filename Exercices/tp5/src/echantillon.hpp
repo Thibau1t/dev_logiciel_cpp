@@ -18,8 +18,9 @@ public:
 
     void ajouter(const double &);
 
-    Valeur getMinimum() const;
-    Valeur getMaximum() const;
+    const Valeur &getMinimum() const;
+    const Valeur &getMaximum() const;
+    const Valeur &getValeur(const int &) const;
 };
 
 #endif
