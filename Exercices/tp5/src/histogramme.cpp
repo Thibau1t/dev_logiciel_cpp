@@ -14,3 +14,22 @@ Histo::Histo(const double &i, const double &f, const int &n)
 }
 
 const std::vector<Classe> &Histo::getClasses() const { return _classes; }
+
+void Histo::ajouter(const double &valeur)
+{
+    auto it = std::find_if(_classes.begin(), _classes.end(), [&valeur](const Classe &c)
+                           { return (c.getBorneInf() <= valeur && valeur < c.getBorneSup()); });
+
+    if (it != _classes.end())
+    {
+        it->ajouter();
+    }
+}
+
+void Histo::ajouter(const Echantillon &e)
+{
+    for (unsigned int i = 0; i < e.getTaille(); ++i)
+    {
+        this->ajouter(e.getValeur(i).getNombre());
+    }
+}

@@ -235,26 +235,29 @@ TEST_CASE("TP5_Histogramme::Constructeur")
 }
 
 //----------------------------------------------------------------------------------------------- 13
-/*TEST_CASE ( "TP5_Histogramme::Echantillon" ) {
- double v[] = { 7.0, 9.0, 8.0, 5.0, 10.0, 14.0, 13.0, 6.0, 5.5, 13.5 };
- double n[] = { 3, 2, 2, 0, 3 };
+TEST_CASE("TP5_Histogramme::Echantillon")
+{
+	double v[] = {7.0, 9.0, 8.0, 5.0, 10.0, 14.0, 13.0, 6.0, 5.5, 13.5};
+	double n[] = {3, 2, 2, 0, 3};
 
- Echantillon e;
+	Echantillon e;
 
- for (unsigned i = 0; i<10; ++i) e.ajouter(v[i]);
+	for (unsigned i = 0; i < 10; ++i)
+		e.ajouter(v[i]);
 
- Histo h(5.0,15.0,5);
+	Histo h(5.0, 15.0, 5);
 
- h.ajouter(e);
+	h.ajouter(e);
 
- REQUIRE ( h.getClasses().size() == 5u );
+	REQUIRE(h.getClasses().size() == 5u);
 
- unsigned i = 0;
+	unsigned i = 0;
 
- for (const Classe & c : h.getClasses()) {
-  REQUIRE ( c.getQuantite() == Approx(n[i++]) );
- }
-}*/
+	for (const Classe &c : h.getClasses())
+	{
+		REQUIRE(c.getQuantite() == Approx(n[i++]));
+	}
+}
 
 //----------------------------------------------------------------------------------------------- 14
 /*TEST_CASE ( "TP5_Histogramme::Generique" ) {

@@ -1,4 +1,4 @@
-#ifndef __ZZ__CPP__ECHANTILLON_
+#ifndef __ZZ__CPP__ECHANTILLON__
 #define __ZZ__CPP__ECHANTILLON__
 
 #include <vector>
