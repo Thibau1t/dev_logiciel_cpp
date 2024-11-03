@@ -15,7 +15,7 @@ endif ()
 # Sources #-----------------------------------------------------------------------------------------
 set ( PROJECT_HEADERS
       src/exemple.hpp
-      #src/classe.hpp
+      src/classe.hpp
       #src/comparateur.hpp
       src/echantillon.hpp
       #src/histogramme.hpp
@@ -25,6 +25,8 @@ set ( PROJECT_HEADERS
 set ( PROJECT_SOURCES
       src/valeur.cpp
       src/echantillon.cpp
+      src/classe.cpp
+      #src/histogramme.cpp
     )
 
 set ( TEST_HEADERS

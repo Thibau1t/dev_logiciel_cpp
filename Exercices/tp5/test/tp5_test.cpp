@@ -5,6 +5,7 @@
 
 #include "valeur.hpp"
 #include "echantillon.hpp"
+#include "classe.hpp"
 
 // #include <histogramme.hpp>
 // #include <comparateur.hpp>
@@ -179,16 +180,17 @@ TEST_CASE("TP5_Echantillon::Indice")
 }
 
 //----------------------------------------------------------------------------------------------- 10
-/*TEST_CASE ( "TP5_Classe::Constructeur" ) {
- const double a = 12.0;
- const double b = 24.0;
+TEST_CASE("TP5_Classe::Constructeur")
+{
+	const double a = 12.0;
+	const double b = 24.0;
 
- Classe c(a,b);
+	Classe c(a, b);
 
- REQUIRE ( c.getBorneInf() == Approx(a) );
- REQUIRE ( c.getBorneSup() == Approx(b) );
- REQUIRE ( c.getQuantite() == 0u );
-}*/
+	REQUIRE(c.getBorneInf() == Approx(a));
+	REQUIRE(c.getBorneSup() == Approx(b));
+	REQUIRE(c.getQuantite() == 0u);
+}
 
 //----------------------------------------------------------------------------------------------- 11
 /*TEST_CASE ( "TP5_Classe::Accesseurs" ) {
