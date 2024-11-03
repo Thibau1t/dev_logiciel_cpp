@@ -9,8 +9,7 @@
 #include "usine.hpp"
 #include "paquet.hpp"
 #include "ressource.hpp"
-
-// #include <consommateur.hpp>
+#include "consommateur.hpp"
 
 // Tests //-----------------------------------------------------------------------------------------
 
@@ -156,17 +155,18 @@ TEST_CASE("TP4_Conso::Ressource")
 }
 
 //------------------------------------------------------------------------------------------------ 9
-/*TEST_CASE ( "TP4_Conso::Consommateur" ) {
- // std::shared_ptr<Ressource> r(new Ressource(17));
- auto r = std::make_shared<Ressource>(17);
- Consommateur c(3,r);
+TEST_CASE("TP4_Conso::Consommateur")
+{
+    // std::shared_ptr<Ressource> r(new Ressource(17));
+    auto r = std::make_shared<Ressource>(17);
+    Consommateur c(3, r);
 
- REQUIRE ( r->getStock() == 17 );
+    REQUIRE(r->getStock() == 17);
 
- c.puiser();
+    c.puiser();
 
- REQUIRE ( r->getStock() == 14 );
-}*/
+    REQUIRE(r->getStock() == 14);
+}
 
 //----------------------------------------------------------------------------------------------- 10
 /*TEST_CASE ( "TP4_Conso::RessoureEpuisee" ) {

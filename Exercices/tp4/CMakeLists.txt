@@ -15,7 +15,7 @@ endif ()
 set ( PROJECT_HEADERS
       src/carte.hpp
       src/complexe.hpp
-      #src/consommateur.hpp
+      src/consommateur.hpp
       src/mouchard.hpp
       src/paquet.hpp
       src/ressource.hpp
@@ -25,7 +25,8 @@ set ( PROJECT_HEADERS
 
 set ( PROJECT_SOURCES
       src/carte.cpp
-      src/ressource.cpp  # Assurez-vous que ce fichier est ici
+      src/ressource.cpp
+      src/consommateur.cpp
       src/usine.cpp
     )
 
