@@ -44,11 +44,12 @@ TEST_CASE("TP5_Valeur::Accesseurs")
 }
 
 //------------------------------------------------------------------------------------------------ 4
-/*TEST_CASE ( "TP5_Valeur::AccesseursConstants" ) {
- const Valeur v;
+TEST_CASE("TP5_Valeur::AccesseursConstants")
+{
+  const Valeur v;
 
- REQUIRE ( v.getNombre() == Approx(0.0) );
-}*/
+  REQUIRE(v.getNombre() == Approx(0.0));
+}
 
 //------------------------------------------------------------------------------------------------ 5
 /*TEST_CASE ( "TP5_Echantillon::Constructeur" ) {
