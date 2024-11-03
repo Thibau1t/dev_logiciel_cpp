@@ -18,7 +18,7 @@ set ( PROJECT_HEADERS
       src/complexe.hpp
       #src/consommateur.hpp
       src/mouchard.hpp
-      #src/paquet.hpp
+      src/paquet.hpp
       #src/ressource.hpp
       src/usine.hpp
       src/vecteur.hpp
@@ -26,7 +26,6 @@ set ( PROJECT_HEADERS
 
 set ( PROJECT_SOURCES
       src/carte.cpp
-      #src/paquet.cpp
       #src/ressource.cpp
       src/usine.cpp
     )

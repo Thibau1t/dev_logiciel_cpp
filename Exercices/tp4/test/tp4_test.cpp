@@ -6,8 +6,7 @@
 
 #include "carte.hpp"
 #include "usine.hpp"
-
-// #include <paquet.hpp>
+#include <paquet.hpp>
 // #include <consommateur.hpp>
 
 // Tests //-----------------------------------------------------------------------------------------
@@ -79,18 +78,20 @@ TEST_CASE("TP4_Carte::UsineN")
 }
 
 //------------------------------------------------------------------------------------------------ 5
-/*TEST_CASE ( "TP4_Carte::PaquetRemplir" ) {
- const unsigned n = 27;
+TEST_CASE("TP4_Carte::PaquetRemplir")
+{
+    const unsigned n = 27;
 
- paquet_t paquet;
- UsineCarte usine(n);
+    paquet_t paquet;
+    UsineCarte usine(n);
 
- remplir(paquet,usine);
+    remplir(paquet, usine);
 
- for (unsigned i = 0; i<n; ++i) {
-  REQUIRE ( paquet[i]->getValeur() == i );
- }
-}*/
+    for (unsigned i = 0; i < n; ++i)
+    {
+        REQUIRE(paquet[i]->getValeur() == i);
+    }
+}
 
 //------------------------------------------------------------------------------------------------ 6
 /*TEST_CASE ( "TP4_Carte::PaquetFlux" ) {
