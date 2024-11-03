@@ -169,24 +169,25 @@ TEST_CASE("TP4_Conso::Consommateur")
 }
 
 //----------------------------------------------------------------------------------------------- 10
-/*TEST_CASE ( "TP4_Conso::RessoureEpuisee" ) {
- // std::shared_ptr<Ressource> r(new Ressource(5));
- auto r = std::make_shared<Ressource>(5);
- Consommateur c(3,r);
+TEST_CASE("TP4_Conso::RessoureEpuisee")
+{
+    // std::shared_ptr<Ressource> r(new Ressource(5));
+    auto r = std::make_shared<Ressource>(5);
+    Consommateur c(3, r);
 
- REQUIRE ( r->getStock() == 5 );
- REQUIRE ( r.use_count() == 2 );
+    REQUIRE(r->getStock() == 5);
+    REQUIRE(r.use_count() == 2);
 
- c.puiser();
+    c.puiser();
 
- REQUIRE ( r->getStock() == 2 );
- REQUIRE ( r.use_count() == 2 );
+    REQUIRE(r->getStock() == 2);
+    REQUIRE(r.use_count() == 2);
 
- c.puiser();
+    c.puiser();
 
- REQUIRE ( r->getStock() == 0 );
- REQUIRE ( r.use_count() == 1 );
-}*/
+    REQUIRE(r->getStock() == 0);
+    REQUIRE(r.use_count() == 1);
+}
 
 //----------------------------------------------------------------------------------------------- 11
 /*TEST_CASE ( "TP4_Conso::SurveillanceRessources" ) {
