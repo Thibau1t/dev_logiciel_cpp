@@ -24,11 +24,12 @@ TEST_CASE("TP5_Valeur::Constructeur")
 }
 
 //------------------------------------------------------------------------------------------------ 2
-/*TEST_CASE ( "TP5_Valeur::ConstructeurDefaut" ) {
- Valeur v;
+TEST_CASE("TP5_Valeur::ConstructeurDefaut")
+{
+  Valeur v;
 
- REQUIRE ( v.getNombre() == Approx(0.0) );
-}*/
+  REQUIRE(v.getNombre() == Approx(0.0));
+}
 
 //------------------------------------------------------------------------------------------------ 3
 /*TEST_CASE ( "TP5_Valeur::Accesseurs" ) {

@@ -7,7 +7,7 @@ private:
     double _v;
 
 public:
-    Valeur(const double &v = 0);
+    Valeur(const double &v = 0.0);
 
     double getNombre() const;
 };
