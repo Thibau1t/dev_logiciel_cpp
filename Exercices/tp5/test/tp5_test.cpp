@@ -193,25 +193,26 @@ TEST_CASE("TP5_Classe::Constructeur")
 }
 
 //----------------------------------------------------------------------------------------------- 11
-/*TEST_CASE ( "TP5_Classe::Accesseurs" ) {
- const double   a = 12.0;
- const double   b = 24.0;
- const unsigned n = 7;
+TEST_CASE("TP5_Classe::Accesseurs")
+{
+	const double a = 12.0;
+	const double b = 24.0;
+	const unsigned n = 7;
 
- Classe c(13.0,25.0);
+	Classe c(13.0, 25.0);
 
- c.setBorneInf(a);
- c.setBorneSup(b);
- c.setQuantite(n);
+	c.setBorneInf(a);
+	c.setBorneSup(b);
+	c.setQuantite(n);
 
- REQUIRE ( c.getBorneInf() == Approx(a) );
- REQUIRE ( c.getBorneSup() == Approx(b) );
- REQUIRE ( c.getQuantite() == n );
+	REQUIRE(c.getBorneInf() == Approx(a));
+	REQUIRE(c.getBorneSup() == Approx(b));
+	REQUIRE(c.getQuantite() == n);
 
- c.ajouter();
+	c.ajouter();
 
- REQUIRE ( c.getQuantite() == n+1 );
-}*/
+	REQUIRE(c.getQuantite() == n + 1);
+}
 
 //----------------------------------------------------------------------------------------------- 12
 /*TEST_CASE ( "TP5_Histogramme::Constructeur" ) {

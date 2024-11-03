@@ -16,6 +16,12 @@ public:
     const double &getBorneInf() const;
     const double &getBorneSup() const;
     const unsigned int &getQuantite() const;
+
+    void setBorneInf(const double &);
+    void setBorneSup(const double &);
+    void setQuantite(const unsigned int &);
+
+    void ajouter();
 };
 
 #endif
