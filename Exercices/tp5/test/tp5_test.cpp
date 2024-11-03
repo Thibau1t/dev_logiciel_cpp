@@ -32,15 +32,16 @@ TEST_CASE("TP5_Valeur::ConstructeurDefaut")
 }
 
 //------------------------------------------------------------------------------------------------ 3
-/*TEST_CASE ( "TP5_Valeur::Accesseurs" ) {
- const double a = 12.0;
+TEST_CASE("TP5_Valeur::Accesseurs")
+{
+  const double a = 12.0;
 
- Valeur v(13.0);
+  Valeur v(13.0);
 
- v.setNombre(a);
+  v.setNombre(a);
 
- REQUIRE ( v.getNombre() == Approx(a) );
-}*/
+  REQUIRE(v.getNombre() == Approx(a));
+}
 
 //------------------------------------------------------------------------------------------------ 4
 /*TEST_CASE ( "TP5_Valeur::AccesseursConstants" ) {

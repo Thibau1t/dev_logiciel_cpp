@@ -10,6 +10,8 @@ public:
     Valeur(const double &v = 0.0);
 
     double getNombre() const;
+
+    void setNombre(const double &);
 };
 
 #endif

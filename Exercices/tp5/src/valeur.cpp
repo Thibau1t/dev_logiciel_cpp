@@ -6,3 +6,8 @@ double Valeur::getNombre() const
 {
     return _v;
 }
+
+void Valeur::setNombre(const double &v)
+{
+    _v = v;
+}
