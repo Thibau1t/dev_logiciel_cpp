@@ -23,6 +23,8 @@ set ( PROJECT_HEADERS
     )
 
 set ( PROJECT_SOURCES
+      src/valeur.cpp
+      
     )
 
 set ( TEST_HEADERS

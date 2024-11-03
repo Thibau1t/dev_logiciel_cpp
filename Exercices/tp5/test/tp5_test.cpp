@@ -3,22 +3,25 @@
 
 #include <cmath>
 
-//#include <histogramme.hpp>
-//#include <comparateur.hpp>
+#include "valeur.hpp"
 
-//using Histo = Histogramme; // A utiliser pour les tests 12-13
-//using Histo = Histogramme<>; // A utiliser a partir du test 14
+// #include <histogramme.hpp>
+// #include <comparateur.hpp>
+
+// using Histo = Histogramme; // A utiliser pour les tests 12-13
+// using Histo = Histogramme<>; // A utiliser a partir du test 14
 
 // Tests //-----------------------------------------------------------------------------------------
 
 //------------------------------------------------------------------------------------------------ 1
-/*TEST_CASE ( "TP5_Valeur::Constructeur" ) {
- const double a = 12.0;
+TEST_CASE("TP5_Valeur::Constructeur")
+{
+  const double a = 12.0;
 
- Valeur v(a);
+  Valeur v(a);
 
- REQUIRE ( v.getNombre() == Approx(a) );
-}*/
+  REQUIRE(v.getNombre() == Approx(a));
+}
 
 //------------------------------------------------------------------------------------------------ 2
 /*TEST_CASE ( "TP5_Valeur::ConstructeurDefaut" ) {
