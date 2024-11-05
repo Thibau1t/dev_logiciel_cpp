@@ -29,3 +29,13 @@ const Valeur &Echantillon::getValeur(const int &i) const
 {
     return _valeurs.at(i);
 }
+
+std::vector<Valeur>::const_iterator Echantillon::begin() const
+{
+    return _valeurs.begin();
+}
+
+std::vector<Valeur>::const_iterator Echantillon::end() const
+{
+    return _valeurs.end();
+}

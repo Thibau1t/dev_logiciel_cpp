@@ -4,6 +4,7 @@
 #include <vector>
 #include <algorithm>
 #include <iostream>
+#include <iterator>
 
 #include "valeur.hpp"
 
@@ -22,6 +23,9 @@ public:
     const Valeur &getMinimum() const;
     const Valeur &getMaximum() const;
     const Valeur &getValeur(const int &) const;
+
+    std::vector<Valeur>::const_iterator begin() const;
+    std::vector<Valeur>::const_iterator end() const;
 };
 
 #endif

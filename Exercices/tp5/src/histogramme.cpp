@@ -28,8 +28,14 @@ void Histo::ajouter(const double &valeur)
 
 void Histo::ajouter(const Echantillon &e)
 {
+    for (const auto &v : e)
+    {
+        ajouter(v.getNombre());
+    }
+    /*
     for (unsigned int i = 0; i < e.getTaille(); ++i)
     {
         this->ajouter(e.getValeur(i).getNombre());
     }
+    */
 }
