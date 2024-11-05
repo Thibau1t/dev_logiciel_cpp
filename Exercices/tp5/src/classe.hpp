@@ -12,6 +12,7 @@ private:
 
 public:
     Classe(const double &, const double &);
+    Classe(const Classe &);
 
     const double &getBorneInf() const;
     const double &getBorneSup() const;
@@ -22,6 +23,8 @@ public:
     void setQuantite(const unsigned int &);
 
     void ajouter();
+
+    bool operator<(const Classe &) const;
 };
 
 #endif

@@ -2,20 +2,22 @@
 #define __ZZ__CPP__HISTOGRAMME__
 
 #include <vector>
+#include <set>
 #include <algorithm>
 
 #include "echantillon.hpp"
 #include "classe.hpp"
 
-class Histo
+class Histogramme
 {
 private:
-    std::vector<Classe> _classes;
+    // std::vector<Classe> _classes;
+    std::set<Classe> _classes;
 
 public:
-    Histo(const double &i, const double &s, const int &n);
+    Histogramme(const double &i, const double &s, const int &n);
 
-    const std::vector<Classe> &getClasses() const;
+    const std::set<Classe> &getClasses() const;
 
     void ajouter(const double &);
 
