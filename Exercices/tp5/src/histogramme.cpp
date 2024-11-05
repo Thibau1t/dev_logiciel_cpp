@@ -43,3 +43,30 @@ void Histogramme::ajouter(const Echantillon &e)
     }
     */
 }
+
+/*
+// HISTOGRAMME
+
+Histogramme::Histogramme(const double &i, const double &s, const int &n)
+{
+    double width = (s - i) / n;
+    double borneInf, borneSup;
+
+    for (int j = 0; j < n; ++j)
+    {
+        borneInf = i + j * width;
+        borneSup = borneInf + width;
+        Classe c = Classe(i, s);
+        _classes.insert(c);
+    }
+}
+
+const std::set<Classe> &Histogramme::getClasses() const
+{
+}
+
+void Histogramme::ajouter(const double &)
+{
+}
+void Histogramme::ajouter(const Echantillon &) {}
+*/
