@@ -18,3 +18,4 @@ struct Factorielle<0>
 };
 
 #endif
+//
