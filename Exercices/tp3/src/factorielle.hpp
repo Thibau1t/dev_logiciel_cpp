@@ -10,7 +10,6 @@ public:
 
 template <int N>
 const unsigned long Factorielle<N>::valeur = N * Factorielle<N - 1>::valeur;
-;
 
 template <>
 struct Factorielle<0>
