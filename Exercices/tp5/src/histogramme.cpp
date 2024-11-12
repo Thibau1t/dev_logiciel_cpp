@@ -1,5 +1,6 @@
 #include "histogramme.hpp"
 
+/*
 Histogramme::Histogramme(const double &i, const double &s, const int &n)
 {
     double width = (s - i) / n;
@@ -36,12 +37,12 @@ void Histogramme::ajouter(const Echantillon &e)
     {
         ajouter(v.getNombre());
     }
-    /*
-    for (unsigned int i = 0; i < e.getTaille(); ++i)
-    {
-        this->ajouter(e.getValeur(i).getNombre());
-    }
-    */
+    //
+    // for (unsigned int i = 0; i < e.getTaille(); ++i)
+    // {
+    //    this->ajouter(e.getValeur(i).getNombre());
+    // }
+
 }
 
 /*

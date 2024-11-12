@@ -10,8 +10,8 @@
 
 // #include <comparateur.hpp>
 
-using Histo = Histogramme; // A utiliser pour les tests 12-13
-// using Histo = Histogramme<>; // A utiliser a partir du test 14
+// using Histo = Histogramme; // A utiliser pour les tests 12-13
+using Histo = Histogramme<>; // A utiliser a partir du test 14
 
 // Tests //-----------------------------------------------------------------------------------------
 
@@ -259,7 +259,7 @@ TEST_CASE("TP5_Histogramme::Echantillon")
 		REQUIRE(c.getQuantite() == Approx(n[i++]));
 	}
 }
-/*
+
 //----------------------------------------------------------------------------------------------- 14
 TEST_CASE("TP5_Histogramme::Generique")
 {
