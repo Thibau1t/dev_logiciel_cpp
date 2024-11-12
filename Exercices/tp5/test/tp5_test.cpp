@@ -284,25 +284,27 @@ TEST_CASE("TP5_Histogramme::Generique")
 }
 
 //----------------------------------------------------------------------------------------------- 15
-/*TEST_CASE ( "TP5_Histogramme::FoncteurGreater" ) {
- using histo_t = Histogramme<std::greater<Classe>>;
+TEST_CASE("TP5_Histogramme::FoncteurGreater")
+{
+	using histo_t = Histogramme<std::greater<Classe>>;
 
- histo_t h(5.0,15.0,5);
+	histo_t h(5.0, 15.0, 5);
 
- double bornesInf[] = { 5.0, 7.0,  9.0, 11.0, 13.0 };
- double bornesSup[] = { 7.0, 9.0, 11.0, 13.0, 15.0 };
+	double bornesInf[] = {5.0, 7.0, 9.0, 11.0, 13.0};
+	double bornesSup[] = {7.0, 9.0, 11.0, 13.0, 15.0};
 
- REQUIRE ( h.getClasses().size() == 5u );
+	REQUIRE(h.getClasses().size() == 5u);
 
- unsigned i = 5;
+	unsigned i = 5;
 
- for (const Classe & c : h.getClasses()) {
-  --i;
-  REQUIRE ( c.getBorneInf() == Approx(bornesInf[i]) );
-  REQUIRE ( c.getBorneSup() == Approx(bornesSup[i]) );
-  REQUIRE ( c.getQuantite() == 0u );
- }
-}*/
+	for (const Classe &c : h.getClasses())
+	{
+		--i;
+		REQUIRE(c.getBorneInf() == Approx(bornesInf[i]));
+		REQUIRE(c.getBorneSup() == Approx(bornesSup[i]));
+		REQUIRE(c.getQuantite() == 0u);
+	}
+}
 
 //----------------------------------------------------------------------------------------------- 16
 /*TEST_CASE ( "TP5_Histogramme::ComparateurQuantite" ) {

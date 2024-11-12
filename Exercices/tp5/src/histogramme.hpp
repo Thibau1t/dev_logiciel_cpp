@@ -9,17 +9,17 @@
 #include "echantillon.hpp"
 #include "classe.hpp"
 
-template <typename T = std::less<>>
+template <typename T = std::less<Classe>>
 class Histogramme
 {
 private:
     // std::vector<Classe> _classes;
-    std::set<Classe> _classes;
+    std::set<Classe, T> _classes;
 
 public:
     Histogramme(const double &i, const double &s, const int &n);
 
-    const std::set<Classe> &getClasses() const;
+    const std::set<Classe, T> &getClasses() const;
 
     void ajouter(const double &);
 
@@ -42,7 +42,7 @@ Histogramme<T>::Histogramme(const double &i, const double &s, const int &n)
 }
 
 template <typename T>
-const std::set<Classe> &Histogramme<T>::getClasses() const { return _classes; }
+const std::set<Classe, T> &Histogramme<T>::getClasses() const { return _classes; }
 
 template <typename T>
 void Histogramme<T>::ajouter(const double &valeur)
@@ -66,12 +66,6 @@ void Histogramme<T>::ajouter(const Echantillon &e)
     {
         ajouter(v.getNombre());
     }
-    /*
-    for (unsigned int i = 0; i < e.getTaille(); ++i)
-    {
-        this->ajouter(e.getValeur(i).getNombre());
-    }
-    */
 }
 
 #endif

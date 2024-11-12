@@ -25,3 +25,8 @@ bool Classe::operator<(const Classe &o) const
 {
     return _inf < o._inf;
 }
+
+bool Classe::operator>(const Classe &o) const
+{
+    return _inf > o._inf;
+}

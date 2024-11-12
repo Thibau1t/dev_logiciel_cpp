@@ -45,7 +45,6 @@ void Histogramme::ajouter(const Echantillon &e)
 
 }
 
-/*
 // HISTOGRAMME
 
 Histogramme::Histogramme(const double &i, const double &s, const int &n)

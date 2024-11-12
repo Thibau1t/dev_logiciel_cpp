@@ -25,14 +25,7 @@ public:
     void ajouter();
 
     bool operator<(const Classe &) const;
+    bool operator>(const Classe &) const;
 };
-/*
-class CompClasse {
-public :
-    bool operator()(const Classe & a, const Classe & b)
-    {
-        return
-    }
-};
-*/
+
 #endif
