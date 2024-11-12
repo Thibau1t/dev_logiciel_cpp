@@ -5,6 +5,7 @@
 #include <set>
 #include <algorithm>
 #include <functional>
+#include <map>
 
 #include "echantillon.hpp"
 #include "classe.hpp"
@@ -15,12 +16,19 @@ class Histogramme
 private:
     // std::vector<Classe> _classes;
     std::set<Classe, T> _classes;
+    std::multimap<Classe, Valeur> _valeurs;
 
 public:
     Histogramme(const double &i, const double &s, const int &n);
 
     template <typename M>
     Histogramme(const Histogramme<M> &);
+
+    const std::multimap<Classe, Valeur> &getValeurs() const;
+
+    std::pair<typename std::multimap<Classe, Valeur>::const_iterator,
+              typename std::multimap<Classe, Valeur>::const_iterator>
+    getValeurs(const Classe &c) const;
 
     const std::set<Classe, T> &getClasses() const;
 
@@ -55,6 +63,20 @@ Histogramme<T>::Histogramme(const Histogramme<M> &other)
 }
 
 template <typename T>
+const std::multimap<Classe, Valeur> &Histogramme<T>::getValeurs() const
+{
+    return _valeurs;
+}
+
+template <typename T>
+std::pair<typename std::multimap<Classe, Valeur>::const_iterator,
+          typename std::multimap<Classe, Valeur>::const_iterator>
+Histogramme<T>::getValeurs(const Classe &c) const
+{
+    return _valeurs.equal_range(c);
+}
+
+template <typename T>
 const std::set<Classe, T> &Histogramme<T>::getClasses() const { return _classes; }
 
 template <typename T>
@@ -70,6 +92,8 @@ void Histogramme<T>::ajouter(const double &valeur)
     _classes.erase(it);
 
     _classes.insert(ma_classes);
+
+    _valeurs.emplace(ma_classes, Valeur(valeur));
 }
 
 template <typename T>

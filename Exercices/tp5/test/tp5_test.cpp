@@ -419,68 +419,75 @@ TEST_CASE("TP5_Etudiant::AccesseursConstants")
 }
 
 //----------------------------------------------------------------------------------------------- 22
-/*TEST_CASE ( "TP5_Valeurs::Association" ) {
- using histo_t = Histogramme<>;
+TEST_CASE("TP5_Valeurs::Association")
+{
+	using histo_t = Histogramme<>;
 
- double v[] = { 7.0, 9.0, 8.0, 5.0, 10.0, 14.0, 13.0, 6.0, 5.5, 13.5 };
+	double v[] = {7.0, 9.0, 8.0, 5.0, 10.0, 14.0, 13.0, 6.0, 5.5, 13.5};
 
- histo_t h(5.0,15.0,5);
+	histo_t h(5.0, 15.0, 5);
 
- for (unsigned i = 0; i<10; ++i) h.ajouter(v[i]);
+	for (unsigned i = 0; i < 10; ++i)
+		h.ajouter(v[i]);
 
- double bornesInf[] = {5.0, 5.0, 5.0, 7.0, 7.0,  9.0,  9.0, 13.0, 13.0, 13.0 };
- double bornesSup[] = {7.0, 7.0, 7.0, 9.0, 9.0, 11.0, 11.0, 15.0, 15.0, 15.0 };
- double notes[]     = {5.0, 6.0, 5.5, 7.0, 8.0,  9.0, 10.0, 14.0, 13.0, 13.5 };
+	double bornesInf[] = {5.0, 5.0, 5.0, 7.0, 7.0, 9.0, 9.0, 13.0, 13.0, 13.0};
+	double bornesSup[] = {7.0, 7.0, 7.0, 9.0, 9.0, 11.0, 11.0, 15.0, 15.0, 15.0};
+	double notes[] = {5.0, 6.0, 5.5, 7.0, 8.0, 9.0, 10.0, 14.0, 13.0, 13.5};
 
- REQUIRE ( h.getClasses().size() == 5u );
- REQUIRE ( h.getValeurs().size() == 10u );
+	REQUIRE(h.getClasses().size() == 5u);
+	REQUIRE(h.getValeurs().size() == 10u);
 
- unsigned i = 0;
+	unsigned i = 0;
 
- for (const std::pair<const Classe,Valeur> & p : h.getValeurs()) {
-  REQUIRE ( p.first.getBorneInf() == Approx(bornesInf[i]) );
-  REQUIRE ( p.first.getBorneSup() == Approx(bornesSup[i]) );
-  REQUIRE ( p.second.getNote() == Approx(notes[i]) );
-  ++i;
- }
-}*/
+	for (const std::pair<const Classe, Valeur> &p : h.getValeurs())
+	{
+		REQUIRE(p.first.getBorneInf() == Approx(bornesInf[i]));
+		REQUIRE(p.first.getBorneSup() == Approx(bornesSup[i]));
+		REQUIRE(p.second.getNote() == Approx(notes[i]));
+		++i;
+	}
+}
 
 //----------------------------------------------------------------------------------------------- 23
-/*TEST_CASE ( "TP5_Valeurs::Intervalle" ) {
- using histo_t = Histogramme<>;
+TEST_CASE("TP5_Valeurs::Intervalle")
+{
+	using histo_t = Histogramme<>;
 
- double v[] = { 7.0, 9.0, 8.0, 5.0, 10.0, 14.0, 13.0, 6.0, 5.5, 13.5 };
+	double v[] = {7.0, 9.0, 8.0, 5.0, 10.0, 14.0, 13.0, 6.0, 5.5, 13.5};
 
- histo_t h(5.0,15.0,5);
+	histo_t h(5.0, 15.0, 5);
 
- for (unsigned i = 0; i<10; ++i) h.ajouter(v[i]);
+	for (unsigned i = 0; i < 10; ++i)
+		h.ajouter(v[i]);
 
- std::vector<double> notes[] = { { 5.0, 6.0, 5.5 },
-								 { 7.0, 8.0 },
-								 { 9.0, 10.0 },
-								 {},
-								 { 14.0, 13.0, 13.5 } };
+	std::vector<double> notes[] = {{5.0, 6.0, 5.5},
+								   {7.0, 8.0},
+								   {9.0, 10.0},
+								   {},
+								   {14.0, 13.0, 13.5}};
 
- unsigned i = 0;
+	unsigned i = 0;
 
- REQUIRE ( h.getClasses().size() == 5u );
- REQUIRE ( h.getValeurs().size() == 10u );
+	REQUIRE(h.getClasses().size() == 5u);
+	REQUIRE(h.getValeurs().size() == 10u);
 
- for (const Classe & c : h.getClasses()) {
-  auto interval = h.getValeurs(c);
-  unsigned j = 0;
+	for (const Classe &c : h.getClasses())
+	{
+		auto interval = h.getValeurs(c);
+		unsigned j = 0;
 
-  while (interval.first != interval.second) {
-   REQUIRE ( (interval.first)->second.getNote() == Approx(notes[i][j]) );
+		while (interval.first != interval.second)
+		{
+			REQUIRE((interval.first)->second.getNote() == Approx(notes[i][j]));
 
-   ++(interval.first);
-   ++j;
-  }
+			++(interval.first);
+			++j;
+		}
 
-  REQUIRE ( j == notes[i].size() );
+		REQUIRE(j == notes[i].size());
 
-  ++i;
- }
-}*/
+		++i;
+	}
+}
 
 // Fin //-------------------------------------------------------------------------------------------
