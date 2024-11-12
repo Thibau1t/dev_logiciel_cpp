@@ -12,11 +12,13 @@ private:
 public:
     Valeur(const double &v = 0.0, const std::string &n = "inconnu");
 
-    void setNombre(const double &);
     double getNombre() const;
     double getNote() const;
-
     std::string getEtudiant() const;
+
+    void setNombre(const double &);
+    void setNote(const double &);
+    void setEtudiant(const std::string &);
 };
 
 #endif

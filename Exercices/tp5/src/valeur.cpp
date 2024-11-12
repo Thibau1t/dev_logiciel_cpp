@@ -12,12 +12,21 @@ double Valeur::getNote() const
     return _v;
 }
 
+std::string Valeur::getEtudiant() const
+{
+    return _nom;
+}
+
 void Valeur::setNombre(const double &v)
 {
     _v = v;
 }
 
-std::string Valeur::getEtudiant() const
+void Valeur::setNote(const double &v)
 {
-    return _nom;
+    _v = v;
+}
+void Valeur::setEtudiant(const std::string &s)
+{
+    _nom = s;
 }

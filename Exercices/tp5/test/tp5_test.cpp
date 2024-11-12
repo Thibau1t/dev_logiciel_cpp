@@ -393,28 +393,30 @@ TEST_CASE("TP5_Etudiant::ConstructeurDefaut")
 }
 
 //----------------------------------------------------------------------------------------------- 20
-/*TEST_CASE ( "TP5_Etudiant::Accesseurs" ) {
- const double a = 12.0;
- const char * n = "Machin";
+TEST_CASE("TP5_Etudiant::Accesseurs")
+{
+	const double a = 12.0;
+	const char *n = "Machin";
 
- Valeur v(13.0,"Truc");
+	Valeur v(13.0, "Truc");
 
- v.setNote(a);
- v.setEtudiant(n);
+	v.setNote(a);
+	v.setEtudiant(n);
 
- REQUIRE ( v.getNombre() == Approx(a) );
- REQUIRE ( v.getNote() == Approx(a) );
- REQUIRE ( v.getEtudiant() == n );
-}*/
+	REQUIRE(v.getNombre() == Approx(a));
+	REQUIRE(v.getNote() == Approx(a));
+	REQUIRE(v.getEtudiant() == n);
+}
 
 //----------------------------------------------------------------------------------------------- 21
-/*TEST_CASE ( "TP5_Etudiant::AccesseursConstants" ) {
- const Valeur v;
+TEST_CASE("TP5_Etudiant::AccesseursConstants")
+{
+	const Valeur v;
 
- REQUIRE ( v.getNombre() == Approx(0.0) );
- REQUIRE ( v.getNote() == Approx(0.0) );
- REQUIRE ( v.getEtudiant() == "inconnu" );
-}*/
+	REQUIRE(v.getNombre() == Approx(0.0));
+	REQUIRE(v.getNote() == Approx(0.0));
+	REQUIRE(v.getEtudiant() == "inconnu");
+}
 
 //----------------------------------------------------------------------------------------------- 22
 /*TEST_CASE ( "TP5_Valeurs::Association" ) {
