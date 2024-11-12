@@ -369,26 +369,28 @@ TEST_CASE("TP5_Histogramme::Conversion")
 }
 
 //----------------------------------------------------------------------------------------------- 18
-/*TEST_CASE ( "TP5_Etudiant::Constructeur" ) {
- const double a = 12.0;
- const char * n = "Machin";
+TEST_CASE("TP5_Etudiant::Constructeur")
+{
+	const double a = 12.0;
+	const char *n = "Machin";
 
- Valeur v(a,n);
+	Valeur v(a, n);
 
- REQUIRE ( v.getNombre() == Approx(a) );
- REQUIRE ( v.getNote() == Approx(a) );
- REQUIRE ( v.getEtudiant().c_str() != 0);
- REQUIRE ( v.getEtudiant() == n );
-}*/
+	REQUIRE(v.getNombre() == Approx(a));
+	REQUIRE(v.getNote() == Approx(a));
+	REQUIRE(v.getEtudiant().c_str() != 0);
+	REQUIRE(v.getEtudiant() == n);
+}
 
 //----------------------------------------------------------------------------------------------- 19
-/*TEST_CASE ( "TP5_Etudiant::ConstructeurDefaut" ) {
- Valeur v;
+TEST_CASE("TP5_Etudiant::ConstructeurDefaut")
+{
+	Valeur v;
 
- REQUIRE ( v.getNombre() == Approx(0.0) );
- REQUIRE ( v.getNote() == Approx(0.0) );
- REQUIRE ( v.getEtudiant() == "inconnu" );
-}*/
+	REQUIRE(v.getNombre() == Approx(0.0));
+	REQUIRE(v.getNote() == Approx(0.0));
+	REQUIRE(v.getEtudiant() == "inconnu");
+}
 
 //----------------------------------------------------------------------------------------------- 20
 /*TEST_CASE ( "TP5_Etudiant::Accesseurs" ) {
