@@ -19,6 +19,9 @@ private:
 public:
     Histogramme(const double &i, const double &s, const int &n);
 
+    template <typename M>
+    Histogramme(const Histogramme<M> &);
+
     const std::set<Classe, T> &getClasses() const;
 
     void ajouter(const double &);
@@ -37,6 +40,16 @@ Histogramme<T>::Histogramme(const double &i, const double &s, const int &n)
         borneInf = i + j * width;
         borneSup = borneInf + width;
         Classe c(borneInf, borneSup);
+        _classes.insert(c);
+    }
+}
+
+template <typename T>
+template <typename M>
+Histogramme<T>::Histogramme(const Histogramme<M> &other)
+{
+    for (const Classe &c : other.getClasses())
+    {
         _classes.insert(c);
     }
 }
