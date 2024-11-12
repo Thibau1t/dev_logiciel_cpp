@@ -9,7 +9,7 @@
 #include "echantillon.hpp"
 #include "classe.hpp"
 
-template <typename T = std::less<Classe>>
+template <typename T = std::less<>>
 class Histogramme
 {
 private:

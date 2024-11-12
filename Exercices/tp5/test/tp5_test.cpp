@@ -307,30 +307,33 @@ TEST_CASE("TP5_Histogramme::FoncteurGreater")
 }
 
 //----------------------------------------------------------------------------------------------- 16
-/*TEST_CASE ( "TP5_Histogramme::ComparateurQuantite" ) {
- using histo_t = Histogramme<ComparateurQuantite>;
+TEST_CASE("TP5_Histogramme::ComparateurQuantite")
+{
+	using histo_t = Histogramme<ComparateurQuantite>;
 
- double v[] = { 7.0, 9.0, 8.0, 5.0, 10.0, 14.0, 13.0, 6.0, 5.5, 13.5 };
+	double v[] = {7.0, 9.0, 8.0, 5.0, 10.0, 14.0, 13.0, 6.0, 5.5, 13.5};
 
- histo_t h(5.0,15.0,5);
+	histo_t h(5.0, 15.0, 5);
 
- for (unsigned i = 0; i<10; ++i) h.ajouter(v[i]);
+	for (unsigned i = 0; i < 10; ++i)
+		h.ajouter(v[i]);
 
- double   bornesInf[] = { 5.0, 13.0, 7.0,  9.0, 11.0 };
- double   bornesSup[] = { 7.0, 15.0, 9.0, 11.0, 13.0 };
- unsigned quantites[] = {   3,    3,   2,    2,    0 };
+	double bornesInf[] = {5.0, 13.0, 7.0, 9.0, 11.0};
+	double bornesSup[] = {7.0, 15.0, 9.0, 11.0, 13.0};
+	unsigned quantites[] = {3, 3, 2, 2, 0};
 
- REQUIRE ( h.getClasses().size() == 5u );
+	REQUIRE(h.getClasses().size() == 5u);
 
- unsigned i = 0;
+	unsigned i = 0;
 
- for (const Classe & c : h.getClasses()) {
-  REQUIRE ( c.getBorneInf() == Approx(bornesInf[i]) );
-  REQUIRE ( c.getBorneSup() == Approx(bornesSup[i]) );
-  REQUIRE ( c.getQuantite() == quantites[i] );
-  ++i;
- }
-}*/
+	for (const Classe &c : h.getClasses())
+	{
+		REQUIRE(c.getBorneInf() == Approx(bornesInf[i]));
+		REQUIRE(c.getBorneSup() == Approx(bornesSup[i]));
+		REQUIRE(c.getQuantite() == quantites[i]);
+		++i;
+	}
+}
 
 //------------------------------------------------------------------------------------------------17
 /*TEST_CASE ( "TP5_Histogramme::Conversion" ) {
