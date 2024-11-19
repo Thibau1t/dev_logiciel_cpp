@@ -35,6 +35,9 @@ public:
     void ajouter(const double &);
 
     void ajouter(const Echantillon &);
+
+    template <typename M>
+    friend std::ostream &operator<<(std::ostream &, const Histogramme<M> &);
 };
 
 template <typename T>
@@ -103,6 +106,26 @@ void Histogramme<T>::ajouter(const Echantillon &e)
     {
         ajouter(v.getNombre());
     }
+}
+
+template <typename T>
+std::ostream &operator<<(std::ostream &os, const Histogramme<T> &histogramme)
+{
+    for (const auto &classe : histogramme.getClasses())
+    {
+        auto [begin, end] = histogramme.getValeurs(classe);
+
+        os << "[" << classe.getBorneInf() << ";" << classe.getBorneSup() << "] = "
+           << classe.getQuantite() << " : ";
+
+        for (auto it = begin; it != end; ++it)
+        {
+            os << "(inconnu;" << it->second.getNombre() << ") ";
+        }
+
+        os << std::endl;
+    }
+    return os;
 }
 
 #endif

@@ -1,6 +1,13 @@
 #include <cstdlib>
+#include <random>
+#include <iterator>
+#include <functional>
+#include <iostream>
 
-int main() {
-    
- return EXIT_SUCCESS;
+#include "histogramme.hpp"
+
+int main()
+{
+
+    return EXIT_SUCCESS;
 }
